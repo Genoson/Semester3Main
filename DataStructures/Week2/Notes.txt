@@ -1,0 +1,67 @@
+Notes for Kennedys' course, monday january 17th, 2022
+
+Recursion - a function that calls itself
+    - common recursive methods include
+        - factorial
+        - fibonacci
+        - binary search
+        - merge sort
+        - quick sort
+        - etc.
+
+    - recursive functions are often used to solve problems that can be broken down into smaller subproblems
+
+
+Recursive Logic
+1 method calls itself
+2 exit the infinite loop at some condition
+
+Recursion is a relatively slow method, if resource use matters consider other methods
+
+recursive functions follow these steps
+1. find the flow 
+2. the stopping criteria
+3. adding edge cases
+
+Assignment - being posted after class
+
+coming classes we get into big 0 notation,
+time complexity and space complexity
+
+next week we get to stacks and queues
+
+Lecture January 18, 2022
+Big O notation
+
+Upcoming assignment will be cumulative of arrays, recursion and big "0" notation
+
+Kennedy stress's rigorous code testing and in depth planning when writing code.
+Bad code that works on your system may not work elsewhere and can cause real issues
+if pushed into real projects. 
+Design, Refine, Code
+
+
+Big 0 is a way to describe the time and space complexity of a function
+how long it will take to run and how much space it takes up while doing it
+
+will we be looking at generalizations as a measure.
+ie: linear is better than quadratic as far as time and space complexity is concerned
+
+types of big(0)
+0(1) - constant time
+0(n) - linear time
+0(n^2) - quadratic time
+0(n^n) - exponential time
+0(log n) - logarithmic time
+polynomial time - 0(n^k)
+poly logarithmic time - 0(n log n)
+... and more
+
+bigocheatsheet.com
+
+assignment and other one off tasks are O(1), constant time
+
+
+
+
+

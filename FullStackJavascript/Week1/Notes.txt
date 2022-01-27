@@ -1,0 +1,83 @@
+Wednesday jan 12, 2022
+
+Peter has 35 years of experience. Graduate of UBC
+Database specialist
+Married a Newfie
+Masters from MUN in education
+
+Luck is the intersection of opportunity and preparedness. - Pierre Elliot Trudeau
+
+What is Full Stack?
+
+Web - React, HTML/CSS Javascript - user tier
+Server - Node, Express - business tier
+Database - MongoDB, PostgreSQL - data tier
+
+2 sprints - midterm and final
+Midterm one for each course
+Final sprint one cumulative project across the courses
+
+QAP to help the program develop into the best version of itself
+
+
+Lots of overlap between the two courses. They are complimentary by design
+
+visual studio code, NPM, git, ThunderClient
+
+thursday jan 13, 2022
+
+common node modules and the require command
+
+path module - node.js
+accessed by:
+const path = require('path');
+has many methods
+
+os module - node.js
+accessed by:
+const os = require('os');
+has many methods
+
+
+file system module - node.js
+accessed by:
+const fs = require('fs');
+has many methods
+sync vs async methods exist for each method
+async methods are to be used unless you explicitly know you need the sync method
+
+events module - node.js
+accessed by:
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+events is a class, therefore an object of that class must be created, as shown above.
+has many methods
+requires a listener to be added to the event emitter
+emitter.on('event', (arg)=>{
+    //do something
+});
+and events to be emitted
+emitter.emit('event');
+event arguments can be passed to the event and then further used in the listener
+
+events are often used to communicate between modules. 
+
+in practice we rarely use the emitter object directly but instead create a class that inherits from it
+
+http module - node.js
+accessed by:
+const http = require('http');
+has many methods
+
+
+5 most important things to learn in Javascript
+1. Equality - == vs ===
+
+2. async javascript - promises, async/await, callbacks, 
+
+3. error handling - try/catch, throw, throw new Error(), throw Error(), throw TypeError(), throw ReferenceError(), 
+                            throw SyntaxError(), throw RangeError(), throw URIError()
+
+4. es6 syntax - arrow functions, spread, template literals ``
+
+5. array methods - map, every, etc

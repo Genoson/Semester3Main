@@ -1,0 +1,16 @@
+// notes on stacks and queues
+// stacks js file is in week 2 folder
+
+//stacks are last in first out, LIFO
+// first lecture of this week was spent on stack structure and logic
+
+this is the second lecture of the week, we will be getting into queues
+
+but first we will use a stack in an example:
+in this example we begin by considering how a number is converted to binary
+floating point number to binary:
+ok, he did an integer to binary conversion
+Kennedy says decimal number to mean base 10 not having a decimal point
+we will use a stack to hold the remainders of the division
+
+

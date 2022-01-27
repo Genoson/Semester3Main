@@ -1,0 +1,8 @@
+// ip address' and domain names
+// how the server responds to requests
+// get requests and post requests
+// how to send data back to the client and to the server
+// http is how this communication happens
+
+
+

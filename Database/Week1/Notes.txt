@@ -1,0 +1,93 @@
+Wednesday January 12, 2022
+
+Relational databases are a way to store and retrieve data.
+The core concepts haven't changed much since the 1970s.
+SQL is a relational database language.
+It also hasn't changed much since it's inception.
+
+Peter Likes to tell stories. They are great perspective of the journey we are undertaking.
+
+Theory course about relational database management systems. RDBMS
+Focus on normalization, normalization is the process of converting a database into a normalized form.
+3rd normal form is the most common form of a database. 3NF
+
+Mostly focusing on the 2nd part of the prescribed textbook.
+
+Big focus on SQL - structured query language.
+We can consider this another language in our toolbox
+
+PERN and MERN stack. End goals of this course.
+
+Data tier focus in this course.
+
+Indexing of data on physical storage media was the beginning of the tech that led to modern data storage and databases.
+
+OLTP - Online Transaction Processing
+OLAP - Online Analytical Processing
+
+
+SQL vs NoSQL 
+
+SQL - relational database
+structure - tables with columns, rows, indexes
+                   tables require a primary key
+                   tables can have foreign keys
+                   tables can have unique constraints
+                   relations between tables are defined by foreign keys, which are primary keys from another table
+
+storage - the storage pattern is concentrated
+
+scale - vertical scaling - more powerful systems
+          - horizontal scaling - more systems replicating data
+
+access - raw SQL
+             - direct database connections
+             - object relational mappers
+
+NoSQL - non relational database
+structure - can be tables, documents, graphs, trees, etc.
+                - key value stores
+
+storage - hashing input
+
+scale - built to scale with high performance... vertical
+          - queries are less flexible
+          - add more partitions that can scale individually
+
+access - REST APIs
+            - CRUD in vendor specific languages
+
+when do use each of these?
+
+SQL - when access patterns isnt defined
+        - when you need flexible queries
+        - when you need relational queries
+        - when you want to use field constraints
+        - when you want to use a well documented access language
+
+NoSQL - predefined access pattern
+             - Known primary keys
+             - when the data model fits
+             - when you need high performance and low latency. near infinite horizontal scaling
+
+************************************************************************************************************
+January 13, 2022 lecture notes
+
+ERD - Entity Relationship Diagram
+
+domain of the attributes 
+
+types of relationships
+- 1-1
+- 1-many
+- many-many
+
+Primary Key - unique identifier
+foreign key - reference to a primary key from another entity
+
+we can use select and from to create a query of a database
+the query is a set of instructions to the database
+the result of this query is called a view
+a view is a subset of the data in the database
+
+

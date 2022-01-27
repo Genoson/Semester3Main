@@ -1,0 +1,93 @@
+PostgreSQL select Notes
+
+SELECT statement in sql is used to retrieve data from a database.
+- has many clauses to generate flexible queries
+including:
+- SELECT - which columns to return
+- FROM - which table to select from
+- WHERE - which rows to return
+- GROUP BY - which columns to group by
+- HAVING - which rows to return
+- ORDER BY - which columns to order by
+- LIMIT - how many rows to return
+- DISTINCT - which columns to return distinct values for
+- FETCH - how many rows to return
+- JOIN - how to join tables, has many sub categories
+- UNION - how to combine queries, also INTERSECT and EXCEPT
+
+SELECT * FROM table_name;
+^^ would return all rows from table_name
+
+SQL statements tend to be evaluated from the end to the beginning.
+
+single quotes can be used for expressional queries
+ie:
+SELECT first_name || ' ' || last_name FROM employees;
+
+Wednesday class notes
+
+Most SQL database managers are very similar. PostgreSQL is open source so a great learning resource.
+
+SELECT * FROM table_name;
+^ would return all rows from table_name
+
+SELECT first_name FROM table_name WHERE last_name IN ('Smith', 'Jones');
+select the item first names where the last name is in the set of Smith and Jones
+
+SELECT first_name FROM table_name WHERE last_name IN ('Smith', 'Jones') AND ...;
+SELECT first_name FROM table_name WHERE last_name IN ('Smith', 'Jones') OR ...;
+can use logical arguments and and or in the WHERE clause to refine results
+
+order of operations inside SQL exists and will be studied later this semester
+
+SELECT customer_id, Sum(amount) FROM invoices GROUP BY customer_id;
+
+ORDER BY will sort the results by the column specified
+you can also use DESC to sort in descending order
+
+Sum() is a function that will return the sum of the column specified
+you can call the result as sum in ORDER BY etc to sort by the sum
+
+JOIN is a way to combine tables
+INNER JOIN - only returns rows that are in both tables
+LEFT JOIN - returns rows from the left table even if they don't have a match in the right table
+RIGHT JOIN - returns rows from the right table even if they don't have a match in the left table
+FULL JOIN - returns rows from both tables even if they don't have a match in the other table
+
+SELECT first_name || ' ' || last_name full_name, Sum(amount) amount 
+FROM payment
+INNER JOIN customer USING (customer_id)
+GROUP BY full_name
+ORDER BY amount DESC
+
+AS can be used to create aliases for columns
+
+LIKE clause can be used to search for a pattern in a column
+there are two wildcards: % and _
+other pattern matching operators:
+- | - matches any one character
+- ^ - matches the start of a string
+- $ - matches the end of a string
+
+Thursday lecture notes
+
+A lot of professional database engineers will work exclusively with the CLI (command line interface)
+Anything the GUI can do the CLI can do as well
+
+-- will be used to comment out SQL statements
+
+you can modify database values directly inside pgadmin 4. remember to save any changes you make.
+
+ORDER BY can take multiple, comma seperated arguments, performing them in the order specified
+
+in command line the ; terminator is necessary to end a statement
+in the query tool in the gui it is optional
+
+default scripts for insert and update and other statements are provided
+
+CRUD
+CREATE = SQL INSERT 
+READ = SQL SELECT
+UPDATE = SQL UPDATE
+DELETE = SQL DELETE -- not used much, very powerful and dangerous, hard to recover data, not recommended
+

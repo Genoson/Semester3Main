@@ -1,0 +1,72 @@
+Notes for the week of january 17, 2022
+Full stack javascript course
+
+Node core global objects are the intended material today
+
+Be careful to stick to reliable sources and recent posts when googling
+
+As in Python group all import statements at the start of a file
+
+Become a master googler
+
+HTTP module. as described in the associated http.js file in this folder
+- http, hypertext transfer protocol, is a standard for transferring data over the web
+- tcp/ip is a standard for internet communication. a packet switch network. Could be its own course.
+
+URL module - universal resource locator, a way to identify a resource on the web. module allows parsing of url strings
+
+event module - handles events and responses to events, both client side and server side
+
+fs module - file system module. described in greater detail in fs.js
+
+os module - operating system module. described in greater detail in os.js. get information about the system and OS
+
+much of our back end code, server specifically, will be headless and run from the command line'
+
+moment module - a library for working with dates and times. read the documentation and create moment.js in future
+- moment is not a baked in global module. it is a module that is installed with npm
+
+
+Next up NPM
+
+Whats the difference npm and npx?
+npm is a package manager for node. installs packages to system
+npx runs code from outside the local file system. no need to install packages
+
+always start a node project by running npm init. 
+this will create a package.json file in the root of the project.
+the package.json file contains information about the project and its dependencies and scripts
+dependencies are packages that the project depends on and will be pushed to production versions
+dev dependencies are packages used in development and will not be pushed to production versions
+
+version numbers are important.
+major release. minor release. patch release.
+in a package json file, the version number is the version of the package
+we use ^ and ~ to specify the version number of a dependency required by the project
+
+moment package handles working with dates and times
+npm install moment  
+^^ would install the moment package to the project
+This will automatically update the package.json file with the version number of the moment package
+
+Popular packages
+crypto - a library for working with cryptographic primitives. formerly a package, now built in to node
+
+axios - a library for making http requests.
+
+lodash - a library for working with arrays and objects.
+
+moment - a library for working with dates and times.
+
+uuid - a library for generating unique identifiers.
+
+prettier - a library for formatting code.
+
+socket.io - a library for working with websockets.
+
+nodemon - a library for automatically restarting a node server when a file changes.
+
+
+
+
+

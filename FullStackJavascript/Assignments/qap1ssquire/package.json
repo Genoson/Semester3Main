@@ -1,0 +1,20 @@
+{
+  "name": "qap1ssquire",
+  "version": "1.0.0",
+  "description": "QAP1 for semester 3 of software development at Keyin College",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Squire",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "plotly": "^1.0.6",
+    "plotly.js-dist": "^2.8.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "week1",
+  "version": "1.0.0",
+  "description": "first week of node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\"\""
+  },
+  "author": "steve squire",
+  "license": "ISC"
+}

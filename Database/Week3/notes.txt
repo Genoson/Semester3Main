@@ -1,0 +1,50 @@
+Today we are starting by reviewing the commands we have covered so far and
+the concepts that they involve.
+
+Select, Insert, and Delete
+FROM
+WHERE
+GROUP BY
+ORDER BY
+LIMIT
+OFFSET
+LIKE
+IN
+
+JOIN 
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+OUTER JOIN
+and the combinations of the above
+left outer join
+right outer join
+full outer join
+left inner join
+right inner join
+full inner join
+
+Going to build a database about people and their cloths
+
+When building a database 
+you will need a sample of the data to work with
+this sample will allow the basic layout and domain of the data to be designed
+Need to determine/ generate unique identifiers for each row of each table
+
+Can use the gui, query tool or the commands line
+
+DROP DATABASE "database name"
+^^ will delete the database
+
+you can change the setting on a database to be able to omit the schema name
+challenge from Peter to figure this out...
+
+schemas are like sub databases in a database
+
+uniqueness rules can be put in place to prevent multiple rows from having the same value
+
+
+1-M relationships are one to many
+they are defined by a foreign key
+
+

@@ -1,0 +1,258 @@
+So far in Data Structures we have been working with arrays.
+The array is a collection of data items.
+In javascript arrays are objects that are weakly typed.
+Typescript can be incorporated into javascript to make arrays strongly typed.
+
+Javascript array methods:
+push() - adds an item to the end of the array
+ie: var arr = [1,2,3];
+arr.push(4);
+console.log(arr); // returns [1,2,3,4]
+
+pop() - removes the last item from the array
+ie: var arr = [1,2,3];
+arr.pop();
+console.log(arr); // returns [1,2]
+
+shift() - removes the first item from the array
+ie: var arr = [1,2,3];
+arr.shift();
+console.log(arr); // returns [2,3]
+
+unshift() - adds an item to the beginning of the array
+ie: var arr = [1,2,3];
+arr.unshift(0);
+console.log(arr); // returns [0,1,2,3]
+
+splice() - removes items from the array and/or adds new items. it takes three parameters:
+1. index of the first item to be removed
+2. number of items to be removed
+3. item(s) to be added
+ie: var arr = [1,2,3];
+arr.splice(1,1);
+console.log(arr); // returns [1,3]
+
+slice() - copies an array segment to a new array. it takes two parameters:
+1. index of the first item to be copied
+2. index of the last item to be copied
+ie: var arr = [1,2,3];
+var newArr = arr.slice(1,2);
+console.log(newArr); // returns [2]
+
+concat() - combines two or more arrays into one. it takes one or more arrays as parameters.
+ie: var arr = [1,2,3];
+var newArr = arr.concat([4,5,6]);
+console.log(newArr); // returns [1,2,3,4,5,6]
+
+every() - checks if all items in an array pass a test. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+var result = arr.every(function(item){
+    return item > 0;
+});
+console.log(result); // returns true
+
+filter() - creates a new array with items that pass a test. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+var newArr = arr.filter(function(item){
+    return item > 1;
+});
+console.log(newArr); // returns [2,3]
+
+forEach() - calls a function for each item in an array. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+arr.forEach(function(item){
+    console.log(item);
+});
+// returns 1
+// returns 2
+// returns 3
+
+join() - joins all array items into a string. it takes a string as a parameter.
+ie: var arr = [1,2,3];
+var str = arr.join('-');
+console.log(str); // returns 1-2-3
+
+indexOf() - returns the index of the first item in the array that matches the parameter.
+ie: var arr = [1,2,3];
+var index = arr.indexOf(2);
+console.log(index); // returns 1
+
+lastIndexOf() - returns the index of the last item in the array that matches the parameter.
+ie: var arr = [1,2,3,2];
+var index = arr.lastIndexOf(2);
+console.log(index); // returns 3
+
+map() - creates a new array with the results of calling a function for each array item. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+var newArr = arr.map(function(item){
+    return item * 2;
+});
+console.log(newArr); // returns [2,4,6]
+
+reverse() - reverses the order of the items in an array.
+ie: var arr = [1,2,3];
+arr.reverse();
+console.log(arr); // returns [3,2,1]
+
+reduce() - reduces the array to a single value. it takes a 4 parameters:
+1. the initial value of the accumulator
+2. the current value of the array
+3. the index of the current item (optional)
+4. the array (optional)
+ie: var arr = [1,2,3];
+var sum = arr.reduce(function(accumulator, item){
+    return accumulator + item;
+});
+console.log(sum); // returns 6
+
+some() - checks if any of the items in an array pass a test. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+var result = arr.some(function(item){
+    return item > 2;
+});
+console.log(result); // returns true
+
+sort() - sorts the items in an array. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+arr.sort();
+console.log(arr); // returns [1,2,3]
+
+toString() - converts an array to a string.
+ie: var arr = [1,2,3];
+var str = arr.toString();
+console.log(str); // returns 1,2,3
+
+valueOf() - converts an array to a number.
+ie: var arr = [1,2,3];
+var num = arr.valueOf();
+console.log(num); // returns NaN???
+
+in ES6 arrays also have several new methods including:
+... spread operator - copies an array to a new array. it takes one parameter: an array
+ie: var arr = [1,2,3];
+var newArr = [...arr];
+console.log(newArr); // returns [1,2,3]
+
+fill() - fills an array with a value. it takes two parameters:
+1. index of the first item to be filled
+2. index of the last item to be filled
+ie: var arr = [1,2,3];
+arr.fill(0,1,2);
+console.log(arr); // returns [1,0,0]
+
+@@iterator - returns an iterator object containing a key:value pair. 
+                    it takes no parameters. the iterator object has a next() method. 
+                    the next() method returns an object with a done property and a value property.
+                    the done property is a boolean that indicates if the iteration is complete.
+                    the value property is the current value of the array.
+ie: var arr = [1,2,3];
+var iterator = arr[Symbol.iterator]();
+console.log(iterator.next()); // returns {done: false, value: 1}
+console.log(iterator.next()); // returns {done: false, value: 2}
+console.log(iterator.next()); // returns {done: false, value: 3}
+console.log(iterator.next()); // returns {done: true, value: undefined}
+
+copyWithin() - copies array items to another location in the array. it takes two parameters:
+1. index of the first item to be copied
+2. index of the last item to be copied
+ie: var arr = [1,2,3];
+arr.copyWithin(1,2);
+console.log(arr); // returns [1,3,3]
+
+entries() - returns an iterator object containing a key:value pair. 
+ie: var arr = [1,2,3];
+var iterator = arr.entries();
+console.log(iterator.next()); // returns {done: false, value: [0,1]}
+console.log(iterator.next()); // returns {done: false, value: [1,2]}
+console.log(iterator.next()); // returns {done: false, value: [2,3]}
+console.log(iterator.next()); // returns {done: true, value: undefined}
+
+includes() - checks if an array contains a certain value. it takes one parameter: a value.
+ie: var arr = [1,2,3];
+var result = arr.includes(2);
+console.log(result); // returns true
+
+find() - returns the value of the first item in the array that satisfies a test. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+var result = arr.find(function(item){
+    return item > 2;
+});
+console.log(result); // returns 3
+
+findIndex() - returns the index of the first item in the array that satisfies a test. it takes a function as a parameter.
+ie: var arr = [1,2,3];
+var result = arr.findIndex(function(item){
+    return item > 2;
+});
+console.log(result); // returns 2
+
+from() - creates an array from an array-like or iterable object. it takes one parameter: an array-like or iterable object.
+ie: var arr = [1,2,3];
+var newArr = Array.from(arr);
+console.log(newArr); // returns [1,2,3]
+
+keys() - returns an iterator object containing the keys of the array.
+ie: var arr = [1,2,3];
+var iterator = arr.keys();
+console.log(iterator.next()); // returns {done: false, value: 0}
+console.log(iterator.next()); // returns {done: false, value: 1}
+console.log(iterator.next()); // returns {done: false, value: 2}
+console.log(iterator.next()); // returns {done: true, value: undefined}
+
+of() - creates an array from a variable number of arguments. it takes one or more parameters.
+ie: var arr = Array.of(1,2,3);
+console.log(arr); // returns [1,2,3]
+
+values() - returns an iterator object containing the values of the array.
+ie: var arr = [1,2,3];
+var iterator = arr.values();
+console.log(iterator.next()); // returns {done: false, value: 1}
+console.log(iterator.next()); // returns {done: false, value: 2}
+console.log(iterator.next()); // returns {done: false, value: 3}
+console.log(iterator.next()); // returns {done: true, value: undefined}
+
+for ... of loop - iterates over the items in an array. it takes a variable as a parameter.
+ie: for (let item of array) {
+    console.log(item);
+}
+
+typed arrays - arrays that are typed. they are arrays that have a specific type of items.
+ie: var arr = new Uint8Array([1,2,3]);
+console.log(arr); // returns [1,2,3]
+
+the TypedArray constructor - creates a typed array. it takes one parameter:
+1. the length of the array
+ie: var arr = new Uint8Array(3);
+console.log(arr); // returns [0,0,0]
+
+the types of typed arrays are:
+int8Array
+uint8Array
+uint8ClampedArray
+int16Array
+uint16Array
+int32Array
+uint32Array
+float32Array
+float64Array
+
+they contain the type of number contained in the name of the array.
+
+in typescript an interface is a type that describes the shape of an object.
+ie: interface Person {
+    name: string;
+    age: number;
+}
+
+
+
+
+
+                    
+
+
+
+
+
+
+
