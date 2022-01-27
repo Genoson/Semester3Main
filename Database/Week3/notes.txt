@@ -48,3 +48,28 @@ uniqueness rules can be put in place to prevent multiple rows from having the sa
 they are defined by a foreign key
 
 
+QAP for database should be posted today, it was
+1. screenshot of command line execution
+    screenshot of database metrics
+
+2. demonstrate select statement capabilities
+    demonstrate where clause
+    demonstrate group by clause
+    demonstrate order by clause
+    demonstrate the join clause
+    BONUS: use only one SQL to accomplish this
+    submit as a .sql file
+
+3. CRUD
+    demonstrate insert statement
+    demonstrate update statement
+    demonstrate delete statement
+    
+    submit as a .sql file
+
+4. CREATE DATABASE
+    demonstrate create database statement
+    at least 2 tables with relationships
+    submit as a .sql file
+
+

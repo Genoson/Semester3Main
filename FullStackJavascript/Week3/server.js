@@ -1,6 +1,6 @@
 // creating a server via node.js based on the video tutorial
 // need http module
-const { fstat } = require('fs');
+const fs = require('fs');
 const http = require('http');
 
 // create a server

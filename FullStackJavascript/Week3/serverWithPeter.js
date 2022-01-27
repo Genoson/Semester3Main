@@ -3,6 +3,11 @@
 const http = require("http");
 const fs = require("fs");
 
+// setting up a toggleable debug tool for console messages
+// ability to turn off console messages for builds pushed to clients 
+// and turn them on for development and testing
+global.DEBUG = true;
+
 const fetchFile = (path, res) => {
     fs.readFile(path, (err, data) => {
         if (err) {

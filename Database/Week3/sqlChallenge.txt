@@ -1,0 +1,20 @@
+SELECT title, release_year, rating, length FROM film
+WHERE rating = 'PG' and length < '100'
+ORDER BY length ASC
+
+SELECT address, district, postal_code, phone FROM address
+ORDER BY district
+
+SELECT rating, count(*) FROM film
+GROUP BY rating
+
+--No data items in the database with release_year 2012
+--UPDATE public."film"
+--	SET release_year=2014
+--	WHERE release_year = 2012 and rating = 'PG' and length <100
+
+--SELECT * FROM film
+--WHERE release_year = 2012
+
+
+

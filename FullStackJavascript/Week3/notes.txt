@@ -4,5 +4,15 @@
 // how to send data back to the client and to the server
 // http is how this communication happens
 
+// second lecture of the week is about github
+// KPM will be aware and available to expound on the concept
+// use github every day, it is essential
+// industry standard practice, get ahead of the game
 
+
+// first talking about routes on a server
+// the request and response objects of a server handle the communication 
+// between the client and the server
+// should run npm init in every project folder at the beginning of the project
+// should also set up a .gitignore file
 
