@@ -1,0 +1,42 @@
+This first lecture, monday jan 31,  we will look at queues
+My code from the textbook is located in week3 folder
+
+so far we have covered :
+arrays
+stacks
+recursive methods
+big(0) notation
+
+
+Queues are a data structure that are first in first out, FIFO
+
+We add to the tail and remove from the head
+
+Queue methods:
+enqueue(item)
+dequeue()
+peek()
+isEmpty()
+size()
+clear()
+toString()
+
+Tuesday feb 1 class notes.
+
+Kennedy is trying to get us working on a problem together
+// example problem to solve today
+// Given a queue which consists of the first n natural numbers, 
+// these are in random order
+// the task is to check whether the given queue can be sorted into another queue
+// 
+We could take the first number from the queue and place it in the stack
+then take the next number and compare it to the top of the stack
+if this number is larger than the number on the stack we pop out the stack value
+into a temporary variable and push in the new number
+we would set this interaction into a recursive function 
+such that the stack could sort all the way to the bottom
+and iterate thru all the numbers in the queue, this generating a sorted stack, 
+then pop the stack into the queue to generate the sorted queue
+
+solution is in problem.js file
+
