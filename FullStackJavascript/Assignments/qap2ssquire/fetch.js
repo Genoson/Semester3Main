@@ -30,11 +30,6 @@ const fetchFile = (path, res) => {
       serverEmitter.emit("queue", message);
       
       console.log(message);
-    // does nothing
-    // } else if (res.statusCode === 301) {
-    //     let message = `${res.statusCode} - Redirecting to /secret was successful, welcome to Goblin Island`;
-    //     serverEmitter.emit("queue", message); 
-     
     } else if (path.endsWith(".html")) {
       let message = `${res.statusCode} - HTML file was served`;
       //logger.messageStamp(message, messageQueue); // original method prior to refactor

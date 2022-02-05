@@ -1,6 +1,5 @@
 // QAP 2 Main executable file
 // Stephen Squire
-// put in some basic content to distinguish between the pages
 // use 1 more status code....
 
 const http = require("http");

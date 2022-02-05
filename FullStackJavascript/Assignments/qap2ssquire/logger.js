@@ -14,6 +14,7 @@ const path = require("path");
 const writeToFile = async (queue) => {
     // we will write the logs to a file called logs.txt
     // to make the file unique, we will append the current date and time to the file name
+    // added a logs folder to the project
     const timeStamp = new Date();
     const timeStampString = `${timeStamp.getFullYear()}${timeStamp.getMonth()+1}${timeStamp.getDate()}`;
     while (!queue.isEmpty()) {

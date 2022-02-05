@@ -1,4 +1,5 @@
 // a queue class for holding the messages
+// unnecessary at this point, but wanted to practice using a data structure class
 
 exports.Queue = class Queue {
     constructor() {
