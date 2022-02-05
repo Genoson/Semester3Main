@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: lightgrey;
+    padding: 20px;
+    text-align: center;
+    color: orchid;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 25%;
+    background-color: #aaaaaa;
+}
+
+

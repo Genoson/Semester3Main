@@ -1,0 +1,46 @@
+Normalization and the normal forms of database design
+
+how often is it required to exceed the 3NF (3rd normal form)?
+
+Mockaroo.com is a tool for generating mock data for testing and development.
+we will be using it extensively in this course.
+
+the DISTINCT clause in SQL allows to filter out duplicate rows.
+
+To avoid the mockaroo data duplication, we can the DISTINCT clause
+and a Select Into statement.
+
+In database design the customers viewpoint is a great way to look at the data.
+
+*******************************************************************************************
+Leading off with a discussion of the QAP
+
+-JOIN was a common issue
+
+-GROUP BY needs to work with an aggregate function... 
+^^hence my bonus problem being incomplete
+
+- avoid special characters in table or field names
+
+- to illustrate a JOIN we should select from both sides of the JOIN
+
+Thursday feb 3 2022
+Back to discussion of Normalization
+most normalization problems are solved by creating a new table to decompose the 
+problem data into smaller pieces.
+
+1NF (1st normal form) - the simplest form of database design
+- no duplicate primary keys
+- unique column names
+- no column can have a table as a value (no multivalued attributes)
+
+
+2NF (2nd normal form) - the next step of Normalization
+- 1NF is achieved
+- uhh, buddy its hard to explain these in plain english
+
+
+3NF (3rd normal form) - the standard level of database normalization
+- 2NF is achieved
+- every non prime attribute is non transitively dependent on every key 
+- every non key attribute has to provide a fact about the key

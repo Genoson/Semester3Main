@@ -1,0 +1,40 @@
+// starting with the event emitter today
+// many javascript libraries have event emitter
+// the event emitter is a class
+we use the event emitter to create events based around certain actions. 
+these can be custom or built into functions and modules
+
+we often used the events in dom manipulation last semester
+for example on a form submission we would create an event
+and then access the values of the form by using the event.target.value
+
+there are pretty well unlimited applications for events and event emitters
+
+for our QAP we will have to build a website server and log all the events 
+then write all of those logs to a file
+
+Peter wants us to use the exports and require to create a module to better
+organize our code, and to make it easier to use and read
+
+Thursday feb 4 2022 lecture notes
+
+!! don't add features that aren't in the specification !!
+that's working for free and impacts code performance
+
+refactoring is reworking the code to make it more efficient, cleaner, easier to read
+no added functionality just revision and editting
+
+more event emitter stuff, and a discussion on the upcoming assignment and what will be expected
+
+*****************
+start putting headers on files to describe what they do and who wrote them
+
+distinction requiremenets:
+1.
+more than 6 routes. a valid redirect. and cookies- set some cookies
+
+2.
+root landing page was links to other pages. use at least 5 http status codes, respond to these accordingly
+
+3.
+use multiple events and listeners, handle them and log them well

@@ -332,3 +332,16 @@ class StackLinkedList {
     return this.items.toString();
   }
 }
+
+// exporting the classes and functions/ methods in this file
+
+module.exports = {
+    Node, 
+    DoublyNode,
+    LinkedList,
+    DoublyLinkedList,
+    CircularLinkedList,
+    SortedLinkedList,
+    StackLinkedList,
+   
+};
