@@ -1,0 +1,8 @@
+This week, feb 7 2022
+we will be covering linked lists
+
+A linked list is a data structure that consists of a group of nodes where each node contains a piece of data
+ and a reference to the next node in the list. it is a linear data structure. 
+ It does not require contiguous memory.
+
+When should we use a linked list?

@@ -1,0 +1,20 @@
+Feedback question responses from this assignment
+
+1. I spent ~ 5 hours on this assignment. Most of that time was spent on refactoring, 
+    and the associated testing and debugging of the refactors as I added new features.
+
+2. I used the lectures and provided videos as well as some select google searches to find
+    specific help during some issues.
+
+3. I did not seek help from friends
+
+4. I did not seek help from instructors.
+
+5. part 1 and part 2 were fairly simple, a 3 or 4 out of 10 in difficulty. 
+    refactoring the code used in part 1 and 2 was more difficult, possibly a 6 out of 10.
+
+    part 3 was a bit more difficult, but the hardest part was deciding which parts of the 
+    code to retool into the events and which to leave alone. 6 / 10.
+
+    I feel quite confident in my ability to write another project suing these techniques and
+    look forward to getting into producing more complex projects on top of this base.
