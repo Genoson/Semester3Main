@@ -1,0 +1,15 @@
+february 9 2022
+
+this week we will get another qap in databases
+
+we will have to design a couple databases for this qap
+
+automative repair as a databases
+
+describe each table and its attribute
+
+describe the relationships between the tables
+
+add necessary intermediary tables to deconstruct M:M relationships
+
+SQL to create the database

@@ -1,4 +1,4 @@
-// this will contain the even functions for the QAP2
+// this will contain the event functions for the QAP2
 
 const events = require("events");
 const fs = require("fs");

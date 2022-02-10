@@ -1,0 +1,45 @@
+feb 9, 2022
+
+automated testing using jest
+associated concepts
+incorporating github and cloud concepts into our tech stack
+how automated testing fits into this stack
+
+writing software that tests your code
+
+testing is a career path in its own right
+testers typically oversee code from a team or teams of developers
+testers rarely fix the problems that they find
+
+test driven development builds the tests and then writes code that passes them
+
+
+types of testing
+
+manual testing
+automated testing
+performance testing
+security testing
+
+black box testing testing blind to the internals of the code
+
+white box testing involves knowing the internals of the code
+
+grey bix exists and is a hybrid of the two above
+
+jest is mostly maintained by facebook employees
+
+think about boundary testing
+^^ testing the edge cases that could break the code
+
+
+*** keep projects within scope of whats requested ***
+
+Sprint 1 - will kinda be 3 different unrelated assignments rather than 1 interwoven project
+in this javascript course we will be building a command line interface
+this week and next we are learning to build the scaffolding for a command line interface
+for any app we might build
+
+npm package winston is a logging library
+
+Thrusday class content is on reading and writing files as well as JSON

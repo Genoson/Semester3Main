@@ -54,6 +54,10 @@ const server = http.createServer((req, res) => {
       path += "style.css";
       res.statusCode = 200;
       break;
+    case "/media/goblin.jpeg":
+      path += "media/goblin.jpeg";
+      res.statusCode = 200;
+      break;
     default:
       path += "404.html";
       res.statusCode = 404;
