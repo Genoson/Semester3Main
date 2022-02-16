@@ -1,0 +1,31 @@
+exercise 1 part 1 - cities in provinces
+
+    This problem of tables to link the cities to the provinces is an example of a 
+one-to-many (1-M) relationship. To represent this in a normalized database we will
+have to include the foreign key of one table in the other table
+
+The two tables (entities) are:
+
+1. cities   - table name is city_table
+                - city_id - a unique id for each city_id
+                - city_name - the name of the city, var char(32?)
+                - theres so many more potential attributes for this table
+                    ^^ population, gdp, growth rate, latitude, longitude, etc.
+                - a foreign key from the province_table to show which province
+                    the city is in
+
+2. provinces - table name is province_table
+                    - province_id - a unique id for each province
+                    - province_name - the name of the province, var char(32?)
+                    - theres so many more potential attributes for this table
+                        ^^ population, gdp, growth rate, land mass, etc.
+
+    This is a 1-M relationship because while there are many cities and many provinces, only 
+a province may have many cities in it. A city may not be in many provinces. A view showing 
+all the cities in a province could be competed by using a where clause to filter the cities table
+by province_id. The tables could also be joined on this id. Such joins could be used along with
+attributes for each table if implemented, such as population, to create views of statistics like 
+percent population of the province found in any city.  Given that we were only asked for these 
+two entities and the necessary components to display their relationship such examples are only 
+hypothetical at this time.
+

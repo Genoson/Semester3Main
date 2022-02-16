@@ -1,0 +1,14 @@
+exercise 1 part 3 - Monthly Publication Usage
+
+    This publication usage tracking database will require 2 tables. One to represent the publications
+and another to represent the usage.
+
+the publication table will have publication id, title, last rev date, and potentially many more attributes.
+
+The usage table will have a usage code (like those in the example jan02Use) coupled to a publication id
+as a composite primary key. it will also have attributes related to the usage, such as usage count, 
+unique users, etc.
+
+This is a one to many relationship. each publication will relate to many usage table entities. Each usage 
+table will relate back to only one publication.
+

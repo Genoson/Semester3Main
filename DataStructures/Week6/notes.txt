@@ -1,0 +1,16 @@
+This week starting feb 14, 2022
+we will be continuing to develop our linked list understanding and code base
+
+example of a linked list worked this week
+
+deleting all even numbers from a linked list is the first example
+
+// finally did the recursion chapter in order, about a month after it was brought up
+in a recursive system we can use a map (memo) to store the results of previous calls
+in doing this we can reduce the computational time of the algorithm
+
+
+we are going to implement a double link list with search and sort
+perhaps with a ui and a search bar to input the search parameters
+we will need to sort the list as well to prevent duplication
+use sets to prevent duplication

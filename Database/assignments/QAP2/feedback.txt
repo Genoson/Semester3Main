@@ -1,0 +1,21 @@
+feedback questions answers for QAP2
+
+1. This QAP took me about 5 hours to complete. I estimate I spent about 45 minutes
+on each part of this QAP. 5 x 45 = 225 minutes on exercise 1 and an additional 45 minutes
+on exercise 2. 
+
+2. For this assignment i used no online resources. I just read the instructions and worked through
+the assignment. Prior to this assignment I had used the textbook, lecture materials and the internet
+to study and practice this content.
+
+3. I asked for no help from my peers.
+
+4. I asked you, Peter, for a few pieces of clarification on the specifics of the  expected submission content.
+
+5. This was a fairly easy QAP from a difficulty stand point. 3/10.
+    It was however a large body of work that required reading and assessing what was being asked, 
+and attacking each problem in a manner to reduce unnecessary work. Several of the problems in 
+exercise 1 could have taken up a considerably larger span of time had I opted to develop out the 
+robustness and functionality of the tables and databases. Similarly, exercise 2 if choosing a complex
+business scenario could easily snowball into a near insurmountable task, hence I chose a small, practical  
+problem.

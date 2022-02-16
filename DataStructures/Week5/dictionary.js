@@ -118,32 +118,102 @@ class Dictionary {
 
 // hash function
 
-// has table definition
+// hash table definition
+// updated to use linear probing. should have extended instead. you live and you learn
 class HashTable {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;
     this.table = {};
   }
+  // replacing simple put with a linear probing put method
+  // put(key, value) {
+  //   if (key != null && value != null) {
+  //     const position = this.hashCode(key);
+  //     this.table[position] = new ValuePair(key, value);
+  //     return true;
+  //   }
+  //   return false;
+  // }
   put(key, value) {
     if (key != null && value != null) {
       const position = this.hashCode(key);
-      this.table[position] = new ValuePair(key, value);
+      if (this.table[position] == null) {
+        this.table[position] = new ValuePair(key, value);
+      } else {
+        let index = position + 1;
+        while(this.table[index] != null) {
+          index++;
+        }
+        this.table[index] = new ValuePair(key, value);
+      }
       return true;
     }
     return false;
   }
+  // updating to a linear probing remove method
+  // remove(key) {
+  //   const hash = this.hashCode(key);
+  //   const valuePair = this.table[hash];
+  //   if (valuePair != null) {
+  //       delete this.table[hash];
+  //       return true;
+  //   }
+  //   return false;
+  // }
   remove(key) {
-    const hash = this.hashCode(key);
-    const valuePair = this.table[hash];
-    if (valuePair != null) {
-        delete this.table[hash];
+    const position = this.hashCode(key);
+    if (this.table[position] != null) {
+      if (this.table[position].key === key) {
+        delete this.table[position];
+        this.verifyRemoveSideEffect(key, position);
         return true;
+      }
+      let index = position +1;
+      while (this.table[index] != null && this.table[index].key !== key) {
+        index++;
+      }
+      if (this.table[index] != null && this.table[index].key === key) {
+        delete this.table[index];
+        this.verifyRemoveSideEffect(key, index);
+        return true;
+      }
     }
     return false;
   }
+  // replacing with a linear probing get method
+  // get(key) {
+  //   const valuePair = this.table[this.hashCode(key)];
+  //   return valuePair == null ? undefined : valuePair.value;
+  // }
   get(key) {
-    const valuePair = this.table[this.hashCode(key)];
-    return valuePair == null ? undefined : valuePair.value;
+    const position = this.hashCode(key);
+    if (this.table[position] != null) {
+      if (this.table[position].key === key) {
+        return this.table[position].value;
+      }
+      let index = position +1;
+      while(this.table[index] != null && this.table[index].key !== key) {
+        index++;
+      }
+      if (this.table[index] != null && this.table[index].key ===key) {
+        return this.table[position].value;
+      }
+    }
+    return undefined;
+  }
+
+  verifyRemoveSideEffect(key, removedPosition) {
+    const hash = this.hashCode(key);
+    let index = removedPosition = 1;
+    while (this.table[index] != null) {
+      const posHash = this.hashCode(this.table[index].key);
+      if (posHash <= hash || posHash <= removedPosition) {
+        this.table[removedPosition] = this.table[index];
+        delete this.table[index];
+        removedPosition = index;
+      }
+      index++
+    }
   }
 
   loseloseHashCode = (key) => {
@@ -157,6 +227,17 @@ class HashTable {
     }
     return hash % 37;
   };
+
+  // a better hash code
+  // not the best but highly recommended, maybe too well known to consider secure, but thats not always a concern
+  djb2HashCode(key){
+    const tableKey = this.toStrFn(key);
+    let hash = 5381;
+    for (let i = 0; i < tableKey.length; i++) {
+      hash = hash * 33 + tableKey.charCodeAt(i);
+    }
+    return hash % 1013;
+  }
 
   hashCode(key) {
     return this.loseloseHashCode(key);
@@ -222,4 +303,11 @@ class HashTableSeparateChaining {
 }
 
 // next will be the linear probing method of handling has table collisions
+// linear probing is a method of handling collisions in a hash table
+// you implement it most simply by adding a counter to the hash function
+// ie if a hash collision occurs, you increment the hash by 1, then 2 until no collision occurs
+
+
+
+
 

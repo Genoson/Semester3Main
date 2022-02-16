@@ -13,3 +13,5 @@ describe the relationships between the tables
 add necessary intermediary tables to deconstruct M:M relationships
 
 SQL to create the database
+
+QAP will involve design, normalization, ERD, and then SQL to create the database

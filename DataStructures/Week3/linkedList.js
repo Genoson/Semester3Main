@@ -161,7 +161,7 @@ class DoublyLinkedList extends LinkedList {
     return false;
   }
   removeAt(index) {
-    if (index >= 0 && index < this.count) {
+    if (index >= 0 && index <= this.count) {
       let current = this.head;
       if (index === 0) {
         this.head = current.next;
@@ -188,17 +188,17 @@ class DoublyLinkedList extends LinkedList {
   // other methods exist but aren't covered at this moment
 }
 
-const list = new DoublyLinkedList();
-list.push(1);
-list.push(2);
-list.push(3);
-list.insert(4, 2);
+// const list = new DoublyLinkedList();
+// list.push(1);
+// list.push(2);
+// list.push(3);
+// list.insert(4, 2);
 //console.log(list)
 
 //console.log(list.removeAt(2))
 //console.log(list.getElementAt(2))
 //console.log(list.remove(4))
-console.log(list.toString());
+// console.log(list.toString());
 
 
 // circular linked lists are extensions of liked or doubly linked lists
@@ -295,7 +295,6 @@ class SortedLinkedList extends LinkedList {
         }
         return i;
     }
-
 }
 
 // stacked linked list code begins here. uses doubly linked list inside

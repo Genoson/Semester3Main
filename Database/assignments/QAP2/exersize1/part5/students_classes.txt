@@ -1,0 +1,25 @@
+    This set of tables and ERD diagram, in its simplest form only requires
+three tables. However, I will discuss below where other tables could be 
+used.
+
+1. A students table to store student information with a student id, name,
+    and some contact information.
+
+2. a classes table to store class information with a class id, class name, 
+and an instructor. The instructor could be a foreign key of instructor id 
+pointing to a table of instructors with deeper details about the instructors,
+but this is not explicitly required.
+
+3. a table to store the relationship between students and classes. This table
+will have a student id and a class id as well as a semester code to insure uniqueness
+in the event of a student repeating classes. This table will also have a grade and/ or 
+list of all the graded materials for the course. It could also link to a table of grades
+that hosts the individual grades and specific views could be used to generate the tables
+containing information of specific students, grades and classes.
+
+    The relationship between students and classes is a many to many relationship. As such
+we need a table to bridge that relationship. Each student can be enrolled in many classes,
+therefore each student can be related to many classes and by extension many of the bridge table.
+The reverse is not true, each instance of the bridge table will relate to 1 student. This same dynamic 
+applies to the classes as well. each class can be related to many students so it can be related to many
+of the bridge table. The reverse only allows each bridge table instance to relate to a single class.

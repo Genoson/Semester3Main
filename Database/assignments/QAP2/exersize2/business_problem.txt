@@ -1,0 +1,31 @@
+QAP 2 exercise 2
+Stephen Squire
+Design a solution to a business problem and work out the database to store the information.
+
+    The church hall sunday craft and bake sale wants to start tracking both the number of people 
+who attended the sale and the traffic at each table in the hall. With this information, they hope to 
+be able to balance out the appearance of the most popular tables across the year, thus stimulating
+increased traffic week after week.
+    This will  require a database with a table entity for each table that visits the hall, a table entity to track each 
+weeks traffic for each table, and a table entity to represent each sale event. The three tables are required 
+because the relationship between the weekly_sale_table and the table_table is many to many. In order to 
+place this in a database in a normalized manner we need to introduce a bridge table that creates two one 
+to many relationships in the place of the many to many relationship. 
+
+1. weekly_sale_table
+    -- sale_id
+    -- sale_date
+    -- attendee_count
+    
+2. table_table
+    -- table_id
+    -- vendor_name
+    -- vendor_email
+
+3.  weekly_table_traffic_table
+    -- table_id
+    -- sale_id
+    -- table_traffic
+
+
+    

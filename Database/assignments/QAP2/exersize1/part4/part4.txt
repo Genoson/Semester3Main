@@ -1,0 +1,6 @@
+exercise 1 part 4 - Simple Normalization
+
+        To normalize this database we needed to take the genre and author columns out of
+    the original table and put them into their own, respective tables. Then we had to introduce
+    a bridge table between the user table and each new table to link the two, turning the two
+    many - many relationships into two sets of two one - many relationships.

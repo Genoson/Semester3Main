@@ -1,0 +1,6 @@
+2022/1/11 10:4:23 200 - HTML file was served,
+2022/1/11 10:4:24 200 - CSS file was served,
+2022/1/11 10:6:35 418 - Goblins are better than trolls,
+2022/1/11 10:6:35 404 - HTML file was served,
+2022/1/11 10:6:35 200 - CSS file was served,
+2022/1/11 10:6:35 200 - CSS file was served,

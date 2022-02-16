@@ -1,0 +1,9 @@
+
+
+two major different kinds of databases:
+transactional and reporting
+
+transactional is the one that is used in business and accessed to the outside world
+
+reporting is used to generate reports and track database activity and use
+

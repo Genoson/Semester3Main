@@ -1,0 +1,52 @@
+This weeks focus is on async programming and datastreams
+
+We will start with a rehash of the event loop
+Notes on the video: What the heck is th eevent loop anywasy?
+
+heap is a data structure that stores data in a way that allows us to quickly find 
+the smallest or largest element in the heap
+
+call stack is a data structure that stores the functions that are currently being
+executed
+
+
+the call stack
+^=> single threaded = one function at a time
+^=> keeps track of what we are doing and what needs to be done
+^=> the call stack has a maximum size
+
+some functions are blocking, they take a long time to execute
+blocking is a problem because in a single threaded program, the call stack is
+full and we can't do anything else. ie, the browser will appear frozen
+
+Friday to Friday for the Sprint, due midnight the 25th of february
+It will be a team based sprint
+3 or 4 people will be working on the sprint
+randomly assigned
+
+we will have to use async programming for the sprint, especially in the file system.
+use fs.promises... pete likes an alias for fs.promises but not necessary
+
+This project is like, all over the place and hardly sensical in its pre presentation state
+
+We will need to create an app that we interact with via commands in the terminal
+it should log what we are doing and access the file system
+It might also interact with kennedy's course, ie we could be using his doubly link list as the
+data structure for the cli program
+
+use a switch to process the arguments passed into the command line, like the 
+html server but all locally hosted
+
+for the switch, the default case should be a catch all that prints out the help and 
+a few other basic commands to get teh user on the right track
+
+
+after the sprint we will get into the symbolic debugger, we should already know this, lol
+
+will need a secondary switch to handle the deeper arguments
+
+ie: node app --help --helpMore
+
+lots fo testing and debugging
+
+token generation, one way, not quite a hashing algorithm

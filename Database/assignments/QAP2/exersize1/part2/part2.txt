@@ -1,0 +1,78 @@
+These are the descriptions for the tables  created in part 2 of exercise 1.
+This problem does not ask for SQL so non was provided.
+
+1 and 2-
+
+I have rolled the student at a university and faculty at a university into one 3 way relationship 
+in my drawing of the ERD as the student and faculty both relate to the university entity.
+
+the university has a university id, name, and address as well as the potential for countless other
+attributes.
+
+the students have a student id, name, email address, and university id as well as the potential for countless other
+attributes.
+
+the faculty has a faculty id, name, email address, and university id as well as the potential for countless other
+attributes.
+
+As you can see the faculty and student tables are very similar. They both share similar types of attributes
+and both have the same 1 to many relationship with the university table. Each university can have  
+Many students/faculty, but each student/ faculty can only be at one university.
+
+
+3 - artwork at a gallery
+
+I have only drawn the two core tables of this relationship. Many other tables representing the 
+relationships between these core tables and teh attributes that could be contained in them could be
+added, such as a curator table with a curator id and the information on the curator(s) of the gallery(s)
+or an artist table to contain the information on the artist(s) of the artwork.
+
+the gallery table has a gallery id, name, address, and curator id as well as the potential for countless other
+attributes.
+
+the artwork table has an artwork id, name, gallery id,  and artist id as well as the potential for countless other
+attributes. Of special note would be information pertaining to selling or bidding on the artwork depending on if 
+this show involved the sale of art.
+
+
+4 - automobile at the DMV
+
+I have only drawn the core tables of this relationship, the auto_table and the registration_table. 
+Other tables such as an owners_table could be included as well.
+
+the auto_table has an auto id, make, year, and mileage as well as the potential for countless other attributes.
+
+the registration_table has a registration id, auto id, a timestamp,  and owner id as well as the potential for 
+countless other attributes such as province, type of registration, renewal date....
+
+This is a one to many relationship each item on the auto_table relating to one or more instances of the
+registration_table. Only one instance of the registration table might be valid at any given time, but past 
+instances of vehicle registration are kept in the database, not overwritten when registration is renewed.
+Each instance of the registration_table will only relate back to one auto_table entity.
+
+
+5 - pizza on a menu
+
+This problem has a large number of possible solutions. if the Menu has only one pizza on it,
+then the pizza would be an instance of a menu_item table and the attributes of the pizza would
+be contained in the menu_item table. If the menu has many pizzas on it, then the pizza could be 
+an instance of a pizza_table entity that relates back to the menu as a part of a larger whole. Furthermore,
+it's unlikely the menu represents the whole database for this restaurant and the pizza_table / menu_item table
+would have relationships with pricing tables, inventory tables, and perhaps other tables...
+
+I have drawn the simplest of these solutions, the pizza being an instance of the menu_item table.
+as such there are no relationships required to describe this, the pizza is one instance of 
+the menu_item table.
+
+
+6 - household furniture
+
+This problem is asking for a table to hold key attributes about household furniture. It only requires
+a single table. This table could have several tables linked to it to describe in greater detail characteristics
+of a piece of furniture, or to collections of information to reduce code repetition. 
+
+I have drawn the simplest solution to the problem, the table holding the attributes of the furniture.
+
+furniture_table has a furniture id, name, and description as well as the potential for countless other
+attributes, including several like furniture type codes thats could be used to allow for different
+types of joins and searches on the furniture database.
