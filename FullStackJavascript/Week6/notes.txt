@@ -26,8 +26,11 @@ randomly assigned
 
 we will have to use async programming for the sprint, especially in the file system.
 use fs.promises... pete likes an alias for fs.promises but not necessary
+pay attention to proper use of async compute 
+ensure code handles all cases
 
 This project is like, all over the place and hardly sensical in its pre presentation state
+^^ starting to make more sense now, thanks be to jesus :)
 
 We will need to create an app that we interact with via commands in the terminal
 it should log what we are doing and access the file system
@@ -50,3 +53,30 @@ ie: node app --help --helpMore
 lots fo testing and debugging
 
 token generation, one way, not quite a hashing algorithm
+
+
+Sprint to contain a database of 10-15 tables
+^^ fully normalized, including several views of the data
+
+
+implement a doubly linked list from a json file describing a user and including a token
+
+searchable, hashing? indexing? 
+
+user tokens should include:
+created
+username
+token
+email
+phone
+expires
+confirmed
+^^ use template literals to allow variable information to tbe fed to the JSON parser
+
+
+
+** optional code **
+write a function to search the token, identify expired tokens, and delete them
+^^ create an index of the tokens by expires and compare to the current datetime
+
+Look up the inquirer module

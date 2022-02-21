@@ -7,3 +7,11 @@ transactional is the one that is used in business and accessed to the outside wo
 
 reporting is used to generate reports and track database activity and use
 
+Need to back up a database for sprint
+
+Tar format is effective for database backup
+
+the option is found byt right clicking the database name. there is a wizard
+
+
+

@@ -2,15 +2,15 @@
   "name": "week6",
   "version": "1.0.0",
   "description": "",
-  "main": "async.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [],
+  "author": "Peter Rawsthorne",
   "license": "ISC",
   "dependencies": {
     "crc": "^4.1.0",
-    "date-fns": "^2.28.0",
-    "node-fetch": "^2.6.7"
+    "date-fns": "*"
   }
 }

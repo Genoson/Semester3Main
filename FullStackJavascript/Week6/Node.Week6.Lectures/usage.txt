@@ -1,0 +1,19 @@
+
+
+myapp init <command>
+
+Usage:
+
+myapp init --all                creates the folder structure and config file
+myapp init --mk                 creates the folder structure
+myapp init --cat                creates the config file with default settings
+myapp config --show             displays a list of the current config settings
+myapp config --reset            resets the config file with default settings
+myapp config --set              sets a specific config setting
+tokenapp token --count             displays a count of the tokens created
+tokenapp token --new <username>    generates a token for a given username, saves tokens to the json file
+tokenapp token --add p <username> <phone>
+tokenapp token --add e <username> <email>
+tokenapp token --search u <username>  fetches a token for a given username
+tokenapp token --search e <email>  fetches a token for a given email
+tokenapp token --search p <phone>  fetches a token for a given phone number

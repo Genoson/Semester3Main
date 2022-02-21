@@ -1,0 +1,83 @@
+Sprint 1 - CLI tool and all that jazz
+
+This project will require:
+1. An index.js file to act as the application launching point. (open to a cooler name)
+^^ This will be a switch statement that will call the appropriate responses to the 
+user's input, based on the first parameter(node index first second)
+^^ a list of the commands are provided in the documentation
+
+2. A package.json file to define the project's dependencies, especially important if we 
+use any node modules rather than just common core modules.
+
+3. a javascript file for the doubly linked list implementation.
+^^ This should be an insertion sort doubly linked list for ease of searching.
+^^ if we succeed at an insertion sorted doubly link list it should sort on username
+^^ Will need to custom write some of the parameters and the equivalency function.
+
+4. a javascript file for the functions that will be called by the index.js file switch statement
+This may include more switch statements. This may be refactored into several files.
+^^ if theres more switch statements they'll process the second parameter. (node index first second)
+
+5.  javaScript file(s) for the functions that will be called in other files when the file system is used.
+^^ create function for the CLI (Back End) file dependencies
+^^ create function for the website (Front End) file dependencies
+^^ a function for editting the config file (node index config -edit <key> <value>)
+^^ a function for resetting the config file (node index config -reset)
+^^ a function for creating the log file dependencies
+^^ a function for adding log files/ entries via the file system
+^^ a function for adding a user to the JSON file (investigate requires module)
+^^ 3 day expiration for user tokens
+^^ user object model found below
+^^ this function should be accessed as a different app 
+ie: node tokenApp <command> <...parameters>
+
+
+6. A node hosted html page is a requisite. this will allow user creation via a UI ( the webpage)
+^^ should be incredibly simple, basic html and css 
+^^ Form submission should call the necessary functions to add the user to the JSON file.
+^^ Form should display the token to the user (would email/ text message IRL) and
+^^ give the user the ability to confirm the token shown to the token in the file
+^^ on confirmation update the JSON file
+*** stretch goal ***
+^^ the html and css should be able to be created by the program itself, including folders.
+
+
+7. an implementation of a logger function to track app use
+^^ this seperate file will be required in every other file.
+^^ this will log a timestamp, the app name, the command name, and a message/ error code 
+
+*** stretch goals ***
+8. an indexing function to allow faster searching of the doubly linked list via a dictionary
+
+9. loading the above dictionary into a binary tree for faster searching.
+
+10. use of the inquires library to allow user input in a repel like manner for user object creation
+
+11. theres something else.... oh github. Thats the thing.
+^^ Who wants to create the github?
+^^ is this how we want to file share?
+^^ it's good practice
+
+12. a function to check if a users token is still valid
+^^ compares the expires date to the current date.
+^^ adds an attribute to the user token indicating expiration.
+
+
+user JSON minimum requirements:
+The following structure
+let newToken = JSON.parse(`{  
+    "created": "1969-01-31 12:30:00", 
+    "username": "username", 
+    "email": "user@example.com", 
+    "phone": "5556597890", 
+    "token": "token", 
+    "expires": "1969-02-03 12:30:00" 
+    "confirmed": "tbd" 
+}`); 
+
+
+
+Ashley will write a function to parse and update the JSON file of user objects
+Ashley will write a function to generate the log objects and write them a file
+
+
