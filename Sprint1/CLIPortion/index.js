@@ -9,6 +9,8 @@ const path = require('path');
 const init = require('./init');
 const config = require('./config');
 const userToken = require('./userToken');
+const Search = require('./search');
+const DoubleLinked = require('./doubleLinked');
 
 //and any other modules and js files we write. This project will be refactored
 
@@ -16,6 +18,7 @@ const userToken = require('./userToken');
 // set this to true to see debug messages
 global.debug = true;
 const helpMessage = `You asked for help`;
+let linkedList = DoubleLinked.testList;
 
 
 // This is where our application will start.
@@ -40,11 +43,13 @@ switch (process.argv[2]) {
     case 'token':
         // call the function to run the token command and pass it the process.argv
         // we might run token as a separate cli app
-        userToken.userToken(`"${process.argv[3]}"`, process.argv[4]);
+        userToken.cliToken(process.argv);
         break;
     case 'search':
         // call the function to run the search command and pass it the process.argv
         // we might run search as a seperate cli app
+        Search.cliSearch(process.argv, linkedList);
+        break;
     case 'help' || '--help' || '-h':
         if (debug) {console.log(helpMessage);}
         // call the function to run the help command and pass it the process.argv

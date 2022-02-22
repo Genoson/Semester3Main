@@ -5,6 +5,7 @@
 
 // import and require statements will go here
 const UserToken = require('./userToken');
+const Search = require('./search');
 
 
 // constants will go here, ie default values for files, error messages, etc.
@@ -34,7 +35,7 @@ class doubleLinked {
         let current;
         if(this.head === null){
             this.head = toInsert;
-            //this.tail = this.head;
+            this.tail = this.head;
             this.length++;
         } else if (this.head.data.userName[0] >= toInsert.data.userName[0]) {
             toInsert.next = this.head;
@@ -50,6 +51,8 @@ class doubleLinked {
             toInsert.next = current.next;
             if (current.next !== null) {
                 current.next.prev = toInsert;
+            } else {
+                this.tail = toInsert;
             }
             current.next = toInsert;
             toInsert.prev = current;
@@ -144,10 +147,33 @@ class doubleLinked {
     // more methods for sure
     printList() {
         let current = this.head;
+        let userArray = [];
         while (current !== null) {
             console.log(current.data.userName);
+            userArray = [...userArray, current.data.userName];
             current = current.next;
         }
+        return userArray;
+    }
+    printListPhone() {
+        let current = this.head;
+        let userArray = [];
+        while (current !== null) {
+            console.log(current.data.phoneNumber);
+            userArray = [...userArray, current.data.phoneNumber];
+            current = current.next;
+        }
+        return userArray;
+    }
+    printListEmail() {
+        let current = this.head;
+        let userArray = [];
+        while (current !== null) {
+            console.log(current.data.email);
+            userArray = [...userArray, current.data.email];
+            current = current.next;
+        }
+        return userArray;
     }
     JSONify() {
         let current = this.head;
@@ -184,7 +210,7 @@ class doubleLinked {
 
 //test code for insertion sort
 let testUser1 = new UserToken.User('mark', '1234567890');
-let testUser2 = new UserToken.User('alex', '1234567890');
+let testUser2 = new UserToken.User('alex', '1234566690');
 let testUser3 = new UserToken.User('zach', '1234567890');
 let testUser4 = new UserToken.User('steve', '1234567890');
 let testUser5 = new UserToken.User('zach', '1234567890');
@@ -201,18 +227,22 @@ testList.insertionSorted(testUser6);
 testList.insertionSorted(testUser7);
 
 
-console.log(testList.length);
-console.log(testUser6.token)
-console.log(testList.getToken(0));
-console.log(testList.getTokenEmail('ashley@company.com'));
-//console.log(testList.confirmToken('ashley', 1108630673));
-testList.printList();
-testUser5.expires = Date.now() - 1;
-testList.purgeExpired();
-testList.printList();
-console.log(testList.JSONify());
+// console.log(testList.length);
+// console.log(testUser6.token)
+// console.log(testList.getToken(0));
+// console.log(testList.getTokenEmail('ashley@company.com'));
+// //console.log(testList.confirmToken('ashley', 1108630673));
+// testList.printList();
+// testUser5.expires = Date.now() - 1;
+// testList.purgeExpired();
+// testList.printList();
+// console.log(testList.tail.data);
+// console.log(testList.JSONify());
+// console.log(testList.tail.data);
+//Search.searchPartialPhone('666', testList);
 
 // export the doublyLinked class and any other functions that need to be used outside this file
 module.exports = {
     doubleLinked,
+    testList
 }

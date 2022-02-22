@@ -27,8 +27,6 @@ class User {
 }
 
 
-// the main function will go here
-
 const userToken = (userName, phoneNumber) => {
     // the userToken code will go here
     let user = new User(userName, phoneNumber);
@@ -37,8 +35,33 @@ const userToken = (userName, phoneNumber) => {
 }
 
 
+// the main function will go here
+
+const cliToken = (argv) => {
+    // cliToken code will go here
+    switch (argv[3]) {
+        case 'create':
+            // code to run the create command and create a user token
+            userToken(argv[4], argv[5]);
+            break;
+        case 'get':
+            // code to run the get command and display the user token
+            break;
+        case '--help' || '-h' || 'help':
+            // code to run the help command and display the help text
+            break;
+        default:
+            // display a message that the command is not recognized and recommend the help command
+            console.log('Command not recognized, please use --help for more information');
+            break;
+    }
+}
+
+
+
 // export the userToken function and any other functions that need to be used outside this file
 module.exports = {
     userToken,
     User,
+    cliToken,
 }
