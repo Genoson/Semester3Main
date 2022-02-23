@@ -27,24 +27,31 @@ class User {
 }
 
 
-const userToken = (userName, phoneNumber) => {
+const userToken = (userName, phoneNumber, linkedList) => {
     // the userToken code will go here
     let user = new User(userName, phoneNumber);
     console.log(`${user.userName} has been created `);
-    // call the function that will write the user object to the json file here
+    // placing the new user inside the linked list
+    linkedList.insertionSorted(user);
+    //console.log(linkedList);
+    // writing the linked list to the file
+    let temp = linkedList.JSONify();
+    fileSys.saveJSON(JSON.stringify(temp));
+
+
 }
 
 
 // the main function will go here
 
-const cliToken = (argv) => {
+const cliToken = (argv, linkedList) => {
     // cliToken code will go here
     switch (argv[3]) {
-        case 'create':
+        case '--create':
             // code to run the create command and create a user token
-            userToken(argv[4], argv[5]);
+            userToken(argv[4], argv[5], linkedList);
             break;
-        case 'get':
+        case '--get':
             // code to run the get command and display the user token
             break;
         case '--help' || '-h' || 'help':

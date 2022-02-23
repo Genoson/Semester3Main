@@ -1,0 +1,38 @@
+[
+  {
+    "userName": "ashley",
+    "phoneNumber": "4152637897",
+    "email": "ashley@company.com",
+    "token": 1108630673,
+    "created": "23-Feb-2022 13:52:48",
+    "expires": "26-Feb-2022 13:52:48",
+    "confirmed": false
+  },
+  {
+    "userName": "kyle",
+    "phoneNumber": "4567899123",
+    "email": "kyle@company.com",
+    "token": 1658015165,
+    "created": "23-Feb-2022 13:59:37",
+    "expires": "26-Feb-2022 13:59:37",
+    "confirmed": false
+  },
+  {
+    "userName": "mark",
+    "phoneNumber": "1234567890",
+    "email": "mark@company.com",
+    "token": 1718940273,
+    "created": "23-Feb-2022 14:33:0",
+    "expires": "26-Feb-2022 14:33:0",
+    "confirmed": false
+  },
+  {
+    "userName": "steve",
+    "phoneNumber": "4564564561",
+    "email": "steve@company.com",
+    "token": 2527860901,
+    "created": "23-Feb-2022 13:51:7",
+    "expires": "26-Feb-2022 13:51:7",
+    "confirmed": false
+  }
+]

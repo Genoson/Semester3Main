@@ -22,14 +22,14 @@ const init = (argv) => {
             break;
         case '--mk':
             // code to run the mk command and build the file structure
-            console.log('mk command should run here');
+            //console.log('mk command should run here');
             fileSys.makeFileStructure();
             break;
         case '--cat':
-            // code to run the cat command and display the contents of the config file
-            let configFile = fileSys.makeConfigFile();
-            configFile = JSON.parse(configFile);
-            console.log(`company: ${configFile.company}`);
+            // code to run the cat command and make the config file
+            console.log('cat command should run here');
+            fileSys.makeConfigFile();
+           
             break;
         case '--help' || '-h' || 'help':
             // code to run the help command and display the help text

@@ -71,21 +71,21 @@ const searchPartialPhone = (partial, linkedList) => {
 const cliSearch = (argv, linkedList) => {
    
     switch(argv[3]){
-        case 'name':
+        case '--name':
             // search for a user by name, partial name
             searchPartialName(argv[4], linkedList);
             break;
-        case 'email':
+        case '--email':
             // search for a user by email, partial email
             searchPartialEmail(argv[4], linkedList);
             break;
-        case 'phone':
+        case '--phone':
             // search for a user by phone number, partial phone number
             searchPartialPhone(argv[4], linkedList);
             break;
         case '--help':
             // print a help message that explains the command line options
-            
+
         default:
             console.log('Please enter a valid search type');
             break;

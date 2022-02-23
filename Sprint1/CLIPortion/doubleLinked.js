@@ -4,6 +4,7 @@
 // ^^ index will provide the position in the linked list allowing for direct access (fast)
 
 // import and require statements will go here
+const fs = require('fs');
 const UserToken = require('./userToken');
 const Search = require('./search');
 
@@ -149,7 +150,7 @@ class doubleLinked {
         let current = this.head;
         let userArray = [];
         while (current !== null) {
-            console.log(current.data.userName);
+            //console.log(current.data.userName);
             userArray = [...userArray, current.data.userName];
             current = current.next;
         }
@@ -159,7 +160,7 @@ class doubleLinked {
         let current = this.head;
         let userArray = [];
         while (current !== null) {
-            console.log(current.data.phoneNumber);
+            //console.log(current.data.phoneNumber);
             userArray = [...userArray, current.data.phoneNumber];
             current = current.next;
         }
@@ -169,7 +170,7 @@ class doubleLinked {
         let current = this.head;
         let userArray = [];
         while (current !== null) {
-            console.log(current.data.email);
+            //console.log(current.data.email);
             userArray = [...userArray, current.data.email];
             current = current.next;
         }
@@ -208,23 +209,37 @@ class doubleLinked {
     }
 }
 
-//test code for insertion sort
-let testUser1 = new UserToken.User('mark', '1234567890');
-let testUser2 = new UserToken.User('alex', '1234566690');
-let testUser3 = new UserToken.User('zach', '1234567890');
-let testUser4 = new UserToken.User('steve', '1234567890');
-let testUser5 = new UserToken.User('zach', '1234567890');
-let testUser6 = new UserToken.User('ashley', '1234567890');
-let testUser7 = new UserToken.User('kyle', '1234567890');
+// a function to read the existing users from the data.json file
+const fillLinkedList = () => {
+    if(fs.existsSync('./app/data.json')) {
+    let users = JSON.parse(fs.readFileSync('./app/data.json', 'utf8'));
+    let userList = new doubleLinked();
+    for (let i = 0; i < users.length; i++) {
+        userList.insertionSorted(users[i]);
+    }
+    return userList;
+    } else {
+        return new doubleLinked();
+    }
+};
 
-const testList = new doubleLinked();
-testList.insertionSorted(testUser1);
-testList.insertionSorted(testUser2);
-testList.insertionSorted(testUser3);
-testList.insertionSorted(testUser4);
-testList.insertionSorted(testUser5);
-testList.insertionSorted(testUser6);
-testList.insertionSorted(testUser7);
+//test code for insertion sort
+// let testUser1 = new UserToken.User('mark', '1234567890');
+// let testUser2 = new UserToken.User('alex', '1234566690');
+// let testUser3 = new UserToken.User('zach', '1234567890');
+// let testUser4 = new UserToken.User('steve', '1234567890');
+// let testUser5 = new UserToken.User('zach', '1234567890');
+// let testUser6 = new UserToken.User('ashley', '1234567890');
+// let testUser7 = new UserToken.User('kyle', '1234567890');
+
+// const testList = new doubleLinked();
+// testList.insertionSorted(testUser1);
+// testList.insertionSorted(testUser2);
+// testList.insertionSorted(testUser3);
+// testList.insertionSorted(testUser4);
+// testList.insertionSorted(testUser5);
+// testList.insertionSorted(testUser6);
+// testList.insertionSorted(testUser7);
 
 
 // console.log(testList.length);
@@ -244,5 +259,5 @@ testList.insertionSorted(testUser7);
 // export the doublyLinked class and any other functions that need to be used outside this file
 module.exports = {
     doubleLinked,
-    testList
+    fillLinkedList,
 }

@@ -12,13 +12,51 @@ const userToken = require('./userToken');
 const Search = require('./search');
 const DoubleLinked = require('./doubleLinked');
 
+
 //and any other modules and js files we write. This project will be refactored
 
 // Pete likes to have a global debug option for testing. 
 // set this to true to see debug messages
 global.debug = true;
-const helpMessage = `You asked for help`;
-let linkedList = DoubleLinked.testList;
+const helpMessage = `
+    Usage: node index [command] [options] [arguments]
+    Commands:
+        help || -h || --help: Displays this help message
+        init - initializes the application
+        init options:
+            --all - initializes the application with all the data structures and files
+            --mk - initializes the application with the file folder structure
+            --cat - initializes the application with the config file
+            --help - displays this help message
+        
+        config - displays or update the config file
+        config options: 
+            --show - displays the config file
+            --set - updates the config file
+                 takes two arguments: [key] [value]
+            --reset - resets the config file to the default values
+            --help - displays this help message   
+        
+        token - displays or update the user tokens   
+        token options:
+            --create - creates a new user token
+                  takes two arguments: [userName] [phoneNumber]
+            --get - displays the user token 
+                  takes two arguments: [getType][getValue]]
+            --help - displays this help message
+        
+        search - searches for user details
+        search options:
+            --name - searches for a user by name
+                  takes one argument: [userName(partial)]
+            --phone - searches for a user by phone number
+                  takes one argument: [phoneNumber(partial)]
+            --email - searches for a user by email
+                  takes one argument: [email(partial)]
+            --help - displays this help message`;
+// let linkedList = DoubleLinked.testList;
+let linkedList = DoubleLinked.fillLinkedList();
+//console.log(linkedList);
 
 
 // This is where our application will start.
@@ -43,19 +81,34 @@ switch (process.argv[2]) {
     case 'token':
         // call the function to run the token command and pass it the process.argv
         // we might run token as a separate cli app
-        userToken.cliToken(process.argv);
+        userToken.cliToken(process.argv, linkedList);
         break;
     case 'search':
         // call the function to run the search command and pass it the process.argv
         // we might run search as a seperate cli app
         Search.cliSearch(process.argv, linkedList);
         break;
-    case 'help' || '--help' || '-h':
+    case 'help':
         if (debug) {console.log(helpMessage);}
         // call the function to run the help command and pass it the process.argv
         //^^ or hard code a display of the help text
+        console.log(helpMessage);
+        break;
+    case '-h':
+        if (debug) {console.log(helpMessage);}
+        // call the function to run the help command and pass it the process.argv
+        //^^ or hard code a display of the help text
+        console.log(helpMessage);
+        break;
+    case '--help':
+        if (debug) {console.log(helpMessage);}
+        // call the function to run the help command and pass it the process.argv
+        //^^ or hard code a display of the help text
+        console.log(helpMessage);
+        break;
     default:
         // display a message that the command is not recognized and recommend the help command
+        console.log(`Command ${process.argv[2]} is not recognized. Please use the help command to see a list of commands.`);
 
 }
 

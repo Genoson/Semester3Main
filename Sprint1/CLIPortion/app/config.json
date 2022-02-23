@@ -1,1 +1,9 @@
-{ "company": "company", "phoneNumber": "", "email": ""}
+{ "company": "company",
+"phoneNumber": "5555555555",
+ "email": "company@company.com",
+ "name": "sprintAppTeam4",
+ "version": "1.0.0",
+ "description": "A CLI tool for token generation, storage, search, and verification",
+ "main": "index.js",
+ "superuser": "none",
+ "database": "local JSON file" }
