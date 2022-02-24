@@ -4,8 +4,8 @@
  */
 
 // This is where we will require and import all of our dependencies
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 const init = require('./init');
 const config = require('./config');
 const userToken = require('./userToken');
@@ -17,11 +17,11 @@ const DoubleLinked = require('./doubleLinked');
 
 // Pete likes to have a global debug option for testing. 
 // set this to true to see debug messages
-global.debug = true;
-const helpMessage = `
+global.debug = false;
+global.helpMessage = `
     Usage: node index [command] [options] [arguments]
     Commands:
-        help || -h || --help: Displays this help message
+        help or -h or --help: Displays this help message
         init - initializes the application
         init options:
             --all - initializes the application with all the data structures and files
@@ -43,6 +43,11 @@ const helpMessage = `
                   takes two arguments: [userName] [phoneNumber]
             --get - displays the user token 
                   takes two arguments: [getType][getValue]]
+                  getType can be: name, phone, email
+                  getValue must be exact, use search to find correct information if unknown
+            --confirm - confirms the user token
+                    takes two arguments: [userName] [token]
+            --clean - removes expired tokens
             --help - displays this help message
         
         search - searches for user details
@@ -89,19 +94,16 @@ switch (process.argv[2]) {
         Search.cliSearch(process.argv, linkedList);
         break;
     case 'help':
-        if (debug) {console.log(helpMessage);}
         // call the function to run the help command and pass it the process.argv
         //^^ or hard code a display of the help text
         console.log(helpMessage);
         break;
     case '-h':
-        if (debug) {console.log(helpMessage);}
         // call the function to run the help command and pass it the process.argv
         //^^ or hard code a display of the help text
         console.log(helpMessage);
         break;
     case '--help':
-        if (debug) {console.log(helpMessage);}
         // call the function to run the help command and pass it the process.argv
         //^^ or hard code a display of the help text
         console.log(helpMessage);

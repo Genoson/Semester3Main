@@ -2,6 +2,7 @@
 // insertion sorted based on user name
 // possible index based on user name and containing phone number
 // ^^ index will provide the position in the linked list allowing for direct access (fast)
+// doubly linked search algorithms that start at the tail and head simultaneously to search faster could be implemented below
 
 // import and require statements will go here
 const fs = require('fs');
@@ -32,6 +33,7 @@ class doubleLinked {
     }
     insertionSorted(object) {
         //code to insert object into the linked list in a sorted fashion
+        // could modify the comparison sort to better handle capitol letters or sub sort beyond the first letter
         let toInsert = new doubleNode(object);
         let current;
         if(this.head === null){
@@ -45,7 +47,6 @@ class doubleLinked {
             this.length++;
         } else {
             current = this.head;
-            // this step currently doesn't sub sort beyond the first letter
             while (current.next !== null && current.next.data.userName[0] < toInsert.data.userName[0]) {
                 current = current.next;
             }         
@@ -67,7 +68,6 @@ class doubleLinked {
         }
         return current.data.token;
     }
-    // these search methods need to be updated to be able to return multiple hits
     getTokenName(userName) {
         let index = this.findIndexName(userName);
         if (index === -1) {
@@ -128,7 +128,7 @@ class doubleLinked {
     confirmToken(userName, token) {
         let current = this.head;
         while (current !== null) {
-            if (current.data.userName === userName && current.data.token === token) {
+            if (current.data.userName === userName && current.data.token == token) {
                 current.data.confirmed = true;
                 return true;
             }
@@ -139,13 +139,13 @@ class doubleLinked {
     purgeExpired() {
         let current = this.head;
         while (current !== null) {
-            if (current.data.expires < Date.now()) {
+            let expires = new Date(current.data.expires);
+            if (expires < Date.now()) {
                 this.remove(current.data.userName);
             }
             current = current.next;
         }
     }
-    // more methods for sure
     printList() {
         let current = this.head;
         let userArray = [];

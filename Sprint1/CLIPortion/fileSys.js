@@ -15,14 +15,40 @@ const logger = require("./logger");
 const getHtml = () => {
   if (!fs.existsSync("./pages/index.html")) {
     console.log("index.html does not exist");
-    if (!path.existsSync("./pages")) {
+    if (!fs.existsSync("./pages")) {
       console.log("pages directory does not exist");
       fs.mkdirSync("./pages");
       console.log("pages directory created");
     }
     fs.writeFileSync(
       "./pages/index.html",
-      '<!DOCTYPE html><html><head><title>index</title></head><body><form action="/" method="POST"><input type="text" name="username" placeholder="username"><input type="text" name="phoneNumber" placeholder="phoneNumber"><input type="text" name="email" placeholder="email"><input type="submit" value="submit"></form></body></html>'
+      "<!DOCTYPE html>" +
+    '<html lang="en"><head>' +
+    "<title>Sprint 1 Sem 3</title><style> body{background-color: aqua;}form{text-align: center;}</style>" +
+    "</head><body>" +
+    '<br><br><br><form action="/" method="POST"><label for="fname">First Name:</label><br><input type="text" id="fname" name="fname"><br>' +
+    '<label for="lname">Last Name:</label><br><input type="text" id="lname" name="lname"><br>' +
+    '<label for="id">Phone Number:</label><br> <input type="text" name = "id" id = "id"><br> ' +
+    '<br><input type="submit" value="submit">' +
+    "</body></html>"
+      // `<!DOCTYPE html>
+      // <html>
+      //   <head>
+      //     <title>Generate a user token</title>
+      //     <meta charset="utf-8">
+      //     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      //     <link rel="stylesheet" href="./index.css">
+      //   </head>
+      //   <body>
+      //     <form action="/" method="POST">
+      //       <input type="text" name="username" placeholder="username" /><input
+      //         type="text"
+      //         name="phoneNumber"
+      //         placeholder="phoneNumber"
+      //       /><input type="submit" value="submit" />
+      //     </form>
+      //   </body>
+      // </html>`
       //^^ replace above with a template literal that will be used to create the html file
     );
     console.log("index.html created");
@@ -34,10 +60,88 @@ const getHtml = () => {
   return data;
 };
 
+const getHtmlPost = (token) => {
+  if (!fs.existsSync("./pages/token.html")) {
+    console.log("token.html does not exist");
+    if (!fs.existsSync("./pages")) {
+      console.log("pages directory does not exist");
+      fs.mkdirSync("./pages");
+      console.log("pages directory created");
+    }
+      //^^ replace above with a template literal that will be used to create the html file
+    console.log("index.html created");
+  } else {
+    console.log("index.html exists");
+  }
+  fs.writeFileSync(
+    "./pages/token.html",
+    `<!DOCTYPE html>
+    <html>
+      <head>
+        <title>View generated user token and validate user</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css">
+      </head>
+      <body>
+        <h1>Your token is: ${token}</h1>
+        <h3>Your username is your first name and last name. <br>
+        ie: ben collins username would be bencollins<br>
+        username is case sensitive</h3>
+        <form action="/" method="POST">
+          <input type="text" name="userName" placeholder="username" /><input
+            type="text"
+            name="tokenConfirm"
+            placeholder="tokenConfirm"
+          /><input type="submit" value="submit" />
+        </form>
+      </body>
+    </html>`
+  );
+  let data = fs.readFileSync("./pages/token.html");
+  console.log("token.html read");
+  return data;
+};
+
+// deeper down the rabbit hole
+const getHtmlPostPost = (message) => {
+  if (!fs.existsSync("./pages/confirm.html")) {
+    console.log("confirm.html does not exist");
+    if (!fs.existsSync("./pages")) {
+      console.log("pages directory does not exist");
+      fs.mkdirSync("./pages");
+      console.log("pages directory created");
+    }
+      //^^ replace above with a template literal that will be used to create the html file
+    console.log("confirm.html created");
+  } else {
+    console.log("confirm.html exists");
+  }
+  fs.writeFileSync(
+    "./pages/confirm.html",
+    `<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Token Confirmation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css">
+      </head>
+      <body>
+        <h1>${message}</h1>  
+      </body>
+    </html>`
+  );
+  let data = fs.readFileSync("./pages/confirm.html");
+  console.log("confirm.html read");
+  return data;
+};
+
+// not used in the code provided by Kyle
 const getCss = () => {
   if (!fs.existsSync("./pages/index.css")) {
     console.log("index.css does not exist");
-    if (!path.existsSync("./pages")) {
+    if (!fs.existsSync("./pages")) {
       console.log("pages directory does not exist");
       fs.mkdirSync("./pages");
       console.log("pages directory created");
@@ -111,6 +215,7 @@ const updateConfig = (json) => {
   console.log("config.json updated");
 };
 
+//artifact from pre event based logging
 const makeLogFile = (message, argv) => {
   let unique = uuid.v4();
   if (!fs.existsSync(`./logs/${ourDates.timeStampFile}-log.txt`)) {
@@ -125,7 +230,6 @@ const makeLogFile = (message, argv) => {
       `${ourDates.timeStampFile()}\t${argv[2]} ${
         argv[3]
       }\t${message}\t${unique}\n`
-      //^^ replace above with a template literal that will be used to create the log file
     );
     if (debug) {
       console.log(`${ourDates.timeStampFile()}-log.txt created`);
@@ -165,4 +269,6 @@ module.exports = {
   updateConfig,
   makeLogFile,
   saveJSON,
+  getHtmlPost,
+  getHtmlPostPost,
 };

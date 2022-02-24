@@ -1,3 +1,4 @@
+// logging code provided by ashley, integrated into the main code base, kept for reference
 const logEvents = require("./logEvents");
 
 const EventEmitter = require("events").EventEmitter;

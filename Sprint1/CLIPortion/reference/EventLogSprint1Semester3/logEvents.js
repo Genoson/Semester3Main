@@ -1,3 +1,5 @@
+// logging code provided by ashley, integrated into the main code base, kept for reference
+
 const { format } = require("date-fns");
 const { v4: uuid } = require("uuid");
 
