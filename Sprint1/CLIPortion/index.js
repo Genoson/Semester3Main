@@ -1,6 +1,7 @@
 /**
  * Root application file, run this file to start the application
  * Sprint 1 winter 2022 Team 4
+ * https://github.com/Genoson/Semester3Main/tree/master/Sprint1
  */
 
 // This is where we will require and import all of our dependencies
