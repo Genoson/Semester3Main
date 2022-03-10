@@ -1,0 +1,40 @@
+<html lang="en">
+  <!-- grabbing the header using ejs -->
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <div class="stores content">
+      <h2>choose a store</h2>
+
+      <% if (stores.length > 0) { %> <% stores.forEach(store => { %>
+      <p>
+        <% console.log(store) %>
+        <a href="<%= store.store_id %>"><b><%= store.store_name %></b></a> <%=
+        store.phone %> <b>Manager:</b> <%= store.mgr_name %> - <%= store.email
+        %>
+      </p>
+      <p>
+        <%= store.address %>, <%= store.city %>, <%= store.country %>, <%=
+        store.postal_code %>
+      </p>
+      <br />
+      <% }) %> <% } %>
+
+      <!-- <p>
+        <b>Bay Bulls</b>, (709)5554466 <b> Manager: </b> Gandalf -
+        gandalf@dvdrentals.com <br />
+        345 Munro Street, St. John's, NL Canada A4R5Y3
+      </p>
+      <p>
+        <b>Pleasantville</b>, (709)5556644 <b> Manager: </b> Fili -
+        fili@dvdrentals.com <br />
+        357 Boat Street, St. John's, NL Canada A4Y5B3
+      </p>
+      <p>
+        <b>Goulds</b>, 7095554646 <b> Manager: </b> Albert -
+        albert@dvdrentals.com <br />
+        345 Church Street, St. John's, NL Canada A4R5Y3
+      </p> -->
+    </div>
+  </body>
+  <%- include('./partials/footer.ejs') %>
+</html>

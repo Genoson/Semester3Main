@@ -1,0 +1,15 @@
+starting to integrate database and node javascript courses into a single cohesive program.
+
+data access layer
+
+Focus on postgresql and then transition to MongoDB
+
+Learning outcomes this week: a basic express app with routes and connectivity to a database.
+
+React does not super easily integrate with express basic concepts
+
+parameters are not passed in the url, but rather in the request object
+
+
+we use pool to manage connections to the database, it all happens from 
+within the express app.

@@ -1,0 +1,13 @@
+Data structures course notes for the week returning after sprint and challenge week
+this is either week 7 or week 9 depending on if we count the sprint weeks or not
+
+
+This class is to address the classes issues with the topic of double linked lists. 
+It is now purely a review class. what a waste of time.
+
+Introduced the idea of a dictionary and a hash table.
+
+Sets as a data structure were referenced but we will go no deeper into them unless we have time at the end
+of the semester
+
+my dictionary code is in week 5 dictionary.js file

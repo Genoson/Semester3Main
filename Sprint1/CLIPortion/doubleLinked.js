@@ -21,8 +21,6 @@ class doubleNode{
         this.prev = null;
     }
 }
-
-
 // the doubly class will go here
 // constructor, params, and methods not finalized yet
 class doubleLinked {

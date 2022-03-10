@@ -1,0 +1,24 @@
+<html lang="en">
+  <!-- grabbing the header using ejs -->
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <div class="stores content">
+      <h2>choose a store</h2>
+
+      <% if (stores.length > 0) { %> <% stores.forEach(store => { %>
+      <p class="store">
+        <% console.log() %>
+       <b><%= store.store_name %></b> <%=
+        store.phone %> <b>Manager:</b> <%= store.mgr_name %> - <%= store.email
+        %>
+      </p>
+      <p>
+        <%= store.address %>, <%= store.city %>, <%= store.country %>, <%=
+        store.postal_code %>
+      </p>
+      <br />
+      <% }) %> <% } %>
+    </div>
+  </body>
+  <%- include('./partials/footer.ejs') %>
+</html>

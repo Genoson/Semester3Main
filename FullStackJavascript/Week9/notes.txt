@@ -1,0 +1,39 @@
+
+
+For the next 2 weeks up to the next qap we will be working on fleshing out
+our full stack capabilities.
+
+the upcoming QAP and sprint will be unified into a cumulative assignment.
+
+building a data access layer
+
+
+full stack:
+
+presentation layer - front end, ui/ux
+router layer - api
+service layer - business logic
+data access layer - database
+
+
+
+view engines handle the front end
+---> model view and controller
+
+pug, nunjucks, handlebars, ejs, jade etc
+
+ejs is the most popular view engine and the most javascript like
+
+ejs will by default look in the views folder for .ejs files
+
+
+we are doing both courses as a unified front
+
+when you save a view in the database it can be queried like normal without 
+needing to know the full select statement. views can't be used to add or remove data.
+
+
+for qap3 we have to build a data access layer against the dvd rentals database
+
+module we will use:
+npm install pg ejs express
