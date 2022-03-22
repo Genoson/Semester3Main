@@ -25,7 +25,7 @@ class ValuePair {
     this.value = value;
   }
   toString() {
-    return `[#${this.key}: ${this.value}]`;
+    return `[${this.key}: ${this.value}]`;
   }
 }
 
@@ -253,7 +253,7 @@ class HashTable {
 // hash table with seperate chaining
 // seperate chaining uses a linked list to avoid collisions.
 
-class HashTableSeparateChaining {
+class HashTableSeparateChaining  {
     constructor(toStrFn = defaultToString) {
         this.toStrFn = toStrFn;
         this.table = {};
@@ -271,15 +271,17 @@ class HashTableSeparateChaining {
     }
     get(key) {
         const position = this.hashCode(key);
-        const linkedList = this.table[postion];
+        const linkedList = this.table[position];
+        const results = [];
         if (linkedList != null && !linkedList.isEmpty()) {
             let current = linkedList.getHead();
             while (current != null) {
                 if (current.element.key === key) {
-                    return current.element.value;
+                    results.push(current.element.value);
                 }
                 current = current.next;
             }
+            return results;
         }
         return undefined;
     }
@@ -300,6 +302,89 @@ class HashTableSeparateChaining {
         }
         return false;
     }
+    verifyRemoveSideEffect(key, removedPosition) {
+      const hash = this.hashCode(key);
+      let index = removedPosition = 1;
+      while (this.table[index] != null) {
+        const posHash = this.hashCode(this.table[index].key);
+        if (posHash <= hash || posHash <= removedPosition) {
+          this.table[removedPosition] = this.table[index];
+          delete this.table[index];
+          removedPosition = index;
+        }
+        index++
+      }
+    }
+  
+    loseloseHashCode = (key) => {
+      if (typeof key === "number") {
+        return key;
+      }
+      const tableKey = this.toStrFn(key);
+      let hash = 0;
+      for (let i = 0; i < tableKey.length; i++) {
+        hash += tableKey.charCodeAt(i);
+      }
+      return hash % 37;
+    };
+  
+    // a better hash code
+    // not the best but highly recommended, maybe too well known to consider secure, but thats not always a concern
+    djb2HashCode(key){
+      const tableKey = this.toStrFn(key);
+      let hash = 5381;
+      for (let i = 0; i < tableKey.length; i++) {
+        hash = hash * 33 + tableKey.charCodeAt(i);
+      }
+      return hash % 1013;
+    }
+  
+    hashCode(key) {
+      return this.loseloseHashCode(key);
+    }
+    toString() {
+      if (this.isEmpty()) {
+        return "";
+      }
+      const valuePairs = this.keyValues();
+      let objString = `${valuePairs[0].toString()}`;
+      for (let i = 1; i < valuePairs.length; i++) {
+        objString = `${objString},${valuePairs[i].toString()}`;
+      }
+      return objString;
+    }
+    isEmpty() {
+      return this.size() === 0;
+    }
+    keys() {
+      return this.keyValues().map((valuePair) => valuePair.key);
+      /** another legacy solution to the above problem
+           * const keys = [];
+              const valuePairs = this.keyValues();
+              for (let i = 0; i < valuePairs.length; i++) {
+                  keys.push(valuePairs[i].key);
+              }
+              return keys;
+           */
+    }
+    values() {
+      return this.keyValues().map((valuePair) => valuePair.value);
+    }
+    keyValues() {
+      return Object.values(this.table); // ecmascrpit 2017 implementation
+      /** a legacy method
+           * const valuePairs = []; 
+               for (const k in this.table) { // {1} 
+                  if (this.hasKey(k)) { 
+                      valuePairs.push(this.table[k]); // {2} 
+                  } 
+              } 
+              return valuePairs; 
+           */
+    }
+    size() {
+      return Object.keys(this.table).length;
+    }
 }
 
 // next will be the linear probing method of handling has table collisions
@@ -310,4 +395,14 @@ class HashTableSeparateChaining {
 
 
 
+
+let hash = new HashTableSeparateChaining();
+hash.put("Gandalf", "ok");
+hash.put("Gandalf", "okie");
+hash.put("John", "ok");
+hash.put("Tyrion", "ok");
+hash.put("Aaron", "ok");
+
+console.log(hash.toString());
+console.log(hash.get("Gandalf"))
 

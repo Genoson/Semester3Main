@@ -1,0 +1,22 @@
+Script for my "to market" portion of the blockchain presentation.
+
+"Hi, Stephen Squire speaking, he/him, from St. John's, Nl.
+
+In order to bring our blockchain based solution to product label changes to market there
+are several hurdles to overcome.
+
+First and foremost among them will be in getting the industry and regulatory body to adopt 
+a digital ID system. Use of a standard digital  ID system is integral to streamlining the process
+of using blockchain technologies. An education initiative will be needed to get the various 
+players on board. Proof of the value proposition will go along way towards getting the industry
+to adopt blockchain.
+
+After the adoption of the blockchain solution a second educational initiative will be required
+for the consumers and retailers. Labels using the new system would be able to receive updates
+quickly and perhaps more frequently than product stock might rotate off of shelves or out of 
+cupboards. By placing a QR code on products and educating consumers and retailers on the use
+of this code, the most recent product information and history of updates to the product will always
+be available."
+
+
+

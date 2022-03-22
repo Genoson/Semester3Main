@@ -1,0 +1,15 @@
+QAP 3 Post assignment evaluation 
+
+1. This assignment took me ~ 3 hours to complete. I might take the time to attack the 3rd story and 
+further refine the stylesheet given the extension, in which case I will be closer to 4 hours.
+
+2. I used your lectures, and online resources.
+
+3. I did not ask for any help from my peers.
+
+4. I did not ask for any help from my instructors
+
+5. This was a particularly simple QAP given that you, Peter, had essentially already done the assignment for us.
+Refining the queries to generate views with minimal data  was probably the most difficult part of the assignment.
+Followed closely by getting used to reading ejs code with those <% %> tags that were breaking my code reading
+flow at first. I would give this one 3/10 overall for difficulty.

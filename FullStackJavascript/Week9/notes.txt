@@ -37,3 +37,6 @@ for qap3 we have to build a data access layer against the dvd rentals database
 
 module we will use:
 npm install pg ejs express
+
+
+

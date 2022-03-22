@@ -1,0 +1,8 @@
+Starting in on the concept of trees today
+
+hierarchal data structure
+
+binary search tree
+^^ these notes exist in my week 6 folder
+
+Theres an incoming QAP for this data Structure

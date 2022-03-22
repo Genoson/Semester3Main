@@ -1,0 +1,19 @@
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+    <body>
+        <div class="stores content">
+            <h2>Contact us at any time!</h2>
+            <% if (store.length > 0) { %>
+                <% store.forEach(store => { %>
+                    <p class="store"><b><%= store.store_name %></b> - <%= store.address%>, 
+                        <%= store.city%>, <%= store.country%> <%= store.postal_code%></br>
+                        Manager: <%= store.mgr_name%></br>
+                        email: <%= store.email%></br>
+                        phone: <%= store.phone%> 
+                    </p> 
+                <% }) %>
+            <% } %>
+        </div>
+    </body>
+    <%- include('./partials/footer.ejs') %>
+</html>

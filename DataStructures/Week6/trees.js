@@ -83,8 +83,11 @@ class BinarySearchTree {
       return true;
     }
   }
+  
   // an example callback function
   // const printNode = (value) => console.log(value);
+
+  // inOrderTraverse will travel the tree in ascending order
   inOrderTraverse(callback) {
     this.inOrderTraverseNode(this.root, callback);
   }
@@ -148,15 +151,15 @@ class BinarySearchTree {
       node.right = this.removeNode(node.right, key);
     } else {
       if (node.left == null && node.right == null) {
-          node = null;
-          return node;
+        node = null;
+        return node;
       }
       if (node.left == null) {
         node = node.right;
         return node;
       } else if (node.right == null) {
-          node = node.left;
-          return node;
+        node = node.left;
+        return node;
       }
       const aux = this.minNode(node.right);
       node.key = aux.key;
@@ -166,8 +169,10 @@ class BinarySearchTree {
   }
 }
 
-
 // the above binary search tree is great but basic
 // a self balancing tree (AVL) is a tree that maintains the balance of the tree
 // adelson-velskii-landis (AVL) is a self balancing tree
 
+module.exports = {
+  BinarySearchTree,
+};

@@ -1,0 +1,14 @@
+Theres jobs for everyone not just the Steves of the world
+
+
+Software design patterns
+MVC - Model View Controller
+^^ - a controller handles data traffic and passes it to the model engine and 
+    view engine as needed to process and then return the data to the user
+
+singleton - a class that can only have one instance
+^^ - a singleton is a class that can only have one instance
+
+
+Full stack no standard way - an article about naming and structural conventions in projects
+^^ - 

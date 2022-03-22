@@ -1,0 +1,14 @@
+Cloud9 VPC ID: vpc-0f0dccf0a6b2c2ab7
+Cloud9 Availability Zone: us-east-1a
+Cloud9 subnet ID: subnet-0161c4e9a0ee5803a
+extraSubnetForRds subnet ID: subnet-0e3f99e0de15d0863
+Cloud9 security group ID: sg-027d72d114f1c73b6
+Database endpoint: supplierdb.cluster-cf3f6hzp9kxk.us-east-1.rds.amazonaws.com
+Repository URI: 093854479360.dkr.ecr.us-east-1.amazonaws.com/cafe/node-web-app
+Elastic Beanstalk URL: myenv.eba-8fxbzqi4.us-east-1.elasticbeanstalk.com/
+
+
+
+A Digital ID system for small business’ involved in this industry would allow for reduced data duplication and better data security. Similar systems have been trialed, 3 years is doable for this roll out.
+Smart contract conditions would allow for rapid approval, making this system enticing to the industry. A proof of stake model could further speed up the system and de incentivize fraudulent behaviour. Optimistic roll ups could also be incorporated allowing for even faster approval.
+Changes to labels being tracked on a distributed public ledger makes it more visible to consumers and retailers. QR code on products could link to the most up to date information on a product as well as the history of changes.

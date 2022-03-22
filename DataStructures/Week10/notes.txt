@@ -1,0 +1,8 @@
+week 10, march 14th 2022,
+Stephen Squire 
+
+this week we should finish hash table and dictionaries and get into the concept of trees?
+
+did an example of dictionary in class
+now we are talking about hashing
+

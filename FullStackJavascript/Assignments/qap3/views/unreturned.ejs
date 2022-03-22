@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <% if (unreturnedDvds.length > 0) { %>
+      <div class="unreturned content">
+        <ul class="dvd">
+            <h3>DVDs that have not been returned for store <%=unreturnedDvds[0].store_id %> <br> Click a Customer Name to Filter by Customer </h3> <br>
+            
+            <h3 class="title">Customer Name | DVD Title</h3>
+            
+        <% unreturnedDvds.forEach(dvd => { %>
+          
+             <li><a href="/cust<%= dvd.customer_name %>"><%= dvd.customer_name %></a> | <%= dvd.title %> </li>
+           
+        <% }) %>
+        </ul>
+    <%} %>
+      </div>
+      <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

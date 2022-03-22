@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <% if (revenueDvds.length > 0) { %>
+      <div class="unreturned content">
+        <ul class="dvd">
+          <!-- commented out?  yes, but the ejs comment below still executes.-->
+          <!-- <% console.log(revenueDvds) %> -->
+            <h3>Top 10 revenue DVD for store <%= revenueDvds[0].store_id %> </h3> <br>
+            <h3 class="title">Title | Revenue</h3>
+            
+        <% revenueDvds.forEach(dvd => { %>
+          
+             <li><%= dvd.title %> | <%= dvd.revenue %> </li>
+           
+        <% }) %>
+        </ul>
+    <%} %>
+      </div>
+      <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
