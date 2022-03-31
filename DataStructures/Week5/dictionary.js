@@ -396,13 +396,17 @@ class HashTableSeparateChaining  {
 
 
 
-let hash = new HashTableSeparateChaining();
-hash.put("Gandalf", "ok");
-hash.put("Gandalf", "okie");
-hash.put("John", "ok");
-hash.put("Tyrion", "ok");
-hash.put("Aaron", "ok");
+// let hash = new HashTableSeparateChaining();
+// hash.put("Gandalf", "ok");
+// hash.put("Gandalf", "okie");
+// hash.put("John", "ok");
+// hash.put("Tyrion", "ok");
+// hash.put("Aaron", "ok");
 
-console.log(hash.toString());
-console.log(hash.get("Gandalf"))
+// console.log(hash.toString());
+// console.log(hash.get("Gandalf"))
 
+module.exports = {
+  HashTableSeparateChaining,
+  Dictionary,
+};

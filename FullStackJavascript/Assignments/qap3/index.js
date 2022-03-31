@@ -25,4 +25,8 @@ app.set("view engine", "ejs");
 app.use("/", returnsRouter);
 app.use("/", revenueRouter);
 
+app.use((req, res) => {
+    res.status(404).render('404');
+});
+
 

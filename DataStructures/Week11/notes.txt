@@ -6,3 +6,6 @@ binary search tree
 ^^ these notes exist in my week 6 folder
 
 Theres an incoming QAP for this data Structure
+
+self balancing trees (AVL) - a type of tree that is balanced
+^^ this is homework. do it steve

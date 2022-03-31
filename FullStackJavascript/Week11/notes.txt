@@ -1,0 +1,22 @@
+method-overide library for update and delete operations on a database and
+perhaps some mongoDB
+
+Might get into react integrations as well
+
+
+Put vs Patch methods
+
+Get will find data
+
+put will update data
+patch is like put but sends instructions to update not the updated data
+
+delete will delete data
+
+post will create data
+
+
+important to view the req object and find the data you are planning on using
+
+remember to get the data layer working as a seperate entity. Dont build too
+many things at once, nightmare for troubleshooting

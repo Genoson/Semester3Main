@@ -10,12 +10,13 @@
           <!-- <% console.log(revenueDvds) %> -->
             <h3>Top 10 revenue DVD for store <%= revenueDvds[0].store_id %> </h3> <br>
             <h3 class="title">Title | Revenue</h3>
-            
+            <div class="list-item-container">
         <% revenueDvds.forEach(dvd => { %>
           
              <li><%= dvd.title %> | <%= dvd.revenue %> </li>
            
         <% }) %>
+      </div>
         </ul>
     <%} %>
       </div>

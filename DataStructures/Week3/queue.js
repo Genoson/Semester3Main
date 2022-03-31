@@ -1,6 +1,6 @@
 // writing a simple queue class along with the textbook
 
-exports.Queue = class Queue {
+class Queue {
   constructor() {
     this.count = 0;
     this.lowestCount = 0;
@@ -47,7 +47,7 @@ exports.Queue = class Queue {
     }
     return objString;
   }
-};
+}
 
 // let q = new Queue();
 // q.enqueue("a");
@@ -56,3 +56,7 @@ exports.Queue = class Queue {
 // q.dequeue();
 // q.dequeue();
 // console.log(q.size());
+
+module.exports = {
+  Queue,
+};

@@ -9,12 +9,13 @@
             <h3>DVDs that have not been returned for store <%=unreturnedDvds[0].store_id %> <br> Click a Customer Name to Filter by Customer </h3> <br>
             
             <h3 class="title">Customer Name | DVD Title</h3>
-            
+            <div class="list-item-container">
         <% unreturnedDvds.forEach(dvd => { %>
           
              <li><a href="/cust<%= dvd.customer_name %>"><%= dvd.customer_name %></a> | <%= dvd.title %> </li>
            
         <% }) %>
+      </div>
         </ul>
     <%} %>
       </div>

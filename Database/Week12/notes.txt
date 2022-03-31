@@ -1,0 +1,4 @@
+mongo  db uses bson to store data as documents
+
+documents must have unique _id values, can be meaningful or random
+mongo automatically indexes these values

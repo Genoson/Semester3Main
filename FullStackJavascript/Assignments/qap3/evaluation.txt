@@ -1,7 +1,6 @@
 QAP 3 Post assignment evaluation 
 
-1. This assignment took me ~ 3 hours to complete. I might take the time to attack the 3rd story and 
-further refine the stylesheet given the extension, in which case I will be closer to 4 hours.
+1. This assignment took me ~ 3 hours to complete. 
 
 2. I used your lectures, and online resources.
 

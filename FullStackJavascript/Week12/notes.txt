@@ -1,0 +1,2 @@
+using both postgres and mongo db for a single search engine style project
+needs a unified ui able to access both

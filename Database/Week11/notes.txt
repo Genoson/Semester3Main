@@ -1,0 +1,11 @@
+No notes last week, was combined with the other peter course.
+this week as well, but we are focusing on mongodb so  notes will go here
+
+completely different from relational databases.
+noSQl
+document based
+JSON
+
+Compass is to mongodb as pgadmin is to postgres
+
+install compass and set up a cloud server for the database
