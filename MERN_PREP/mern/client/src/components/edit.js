@@ -99,8 +99,8 @@ export default function Edit() {
                             type="radio"
                             name="positionOptions"
                             id="positionIntern"
-                            value="intern"
-                            checked={form.level === "intern"}
+                            value="Intern"
+                            checked={form.level === "Intern"}
                             onChange={(e) => updateForm({ level: e.target.value })}
                         />
                         <label className="form-check-label" htmlFor="positionIntern">Intern</label>
@@ -111,8 +111,8 @@ export default function Edit() {
                             type="radio"
                             name="positionOptions"
                             id="positionJunior"
-                            value="junior"
-                            checked={form.level === "junior"}
+                            value="Junior"
+                            checked={form.level === "Junior"}
                             onChange={(e) => updateForm({ level: e.target.value })}
                         />
                         <label className="form-check-label" htmlFor="positionJunior">Junior</label>
@@ -123,8 +123,8 @@ export default function Edit() {
                             type="radio"
                             name="positionOptions"
                             id="positionSenior"
-                            value="senior"
-                            checked={form.level === "senior"}
+                            value="Senior"
+                            checked={form.level === "Senior"}
                             onChange={(e) => updateForm({ level: e.target.value })}
                         />
                         <label className="form-check-label" htmlFor="positionSenior">Senior</label>

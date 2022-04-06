@@ -1,0 +1,19 @@
+upcoming sprint
+^^ - we will need to connect to both the mongodb and postgresql databases
+
+^^ - Sprint will release Thursday at noon
+^^ - two weeks
+
+^^ - We can create our own modules for log in from scratch rather than using passport
+
+
+^^ - We will be logging the queries launched by specific users
+
+^^ - Peter confirms that this will be individual and team fusion
+
+^^ - BST - will need to enter a list of CSV numbers and generate a balanced set of numbers in a BST
+
+^^ - OAuth is an authentication and authorization protocol developed by google
+
+^^ - security is a great choice of focus
+

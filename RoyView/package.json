@@ -1,0 +1,15 @@
+{
+  "name": "royview",
+  "version": "1.0.0",
+  "description": "tutorial with Roy",
+  "main": "treeReview.js",
+  "scripts": {
+    "start": "node treeReview.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "treeify": "^1.1.0"
+  }
+}

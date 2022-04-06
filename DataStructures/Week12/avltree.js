@@ -166,7 +166,7 @@ avlTree.insert(14);
 const printNode = (value) => console.log(value);
 
 avlTree.inOrderTraverse(printNode);
-console.log("avl tree height: ", avlTree.getNodeHeight(this.root));
+console.log("avl tree height: ", avlTree.getNodeHeight(avlTree.root));
 console.log(avlTree.min());
 console.log(avlTree.max());
 

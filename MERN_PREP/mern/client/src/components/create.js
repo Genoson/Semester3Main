@@ -71,7 +71,7 @@ export default function Create() {
               name="positionOptions"
               id="positionIntern"
               value="Intern"
-              checked={form.position === "Intern"}
+              checked={form.level === "Intern"}
               onChange={(e) => updateForm({ level: e.target.value })}
             />
             <label htmlFor="positionIntern" className="form-check-label">
@@ -85,7 +85,7 @@ export default function Create() {
               name="positionOptions"
               id="positionJunior"
               value="Junior"
-              checked={form.position === "Junior"}
+              checked={form.level === "Junior"}
               onChange={(e) => updateForm({ level: e.target.value })}
             />
             <label htmlFor="positionJunior" className="form-check-label">
@@ -99,7 +99,7 @@ export default function Create() {
               name="positionOptions"
               id="positionSenior"
               value="Senior"
-              checked={form.position === "Senior"}
+              checked={form.level === "Senior"}
               onChange={(e) => updateForm({ level: e.target.value })}
             />
             <label htmlFor="positionSenior" className="form-check-label">

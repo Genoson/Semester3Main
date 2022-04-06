@@ -1,0 +1,19 @@
+This is the last week of classes before the final sprint. 
+
+Hopefully Kennedy gives indication of the problem we will have to solve in the final sprint.
+
+
+this week we will look at some search and sort algorithms
+
+Binary search tree will be on the sprint
+
+
+the upcoming sprint has an individual and a group component
+
+- individual component will be the binary tree
+^^ - we just need to use the given binary tree from class and make it work for the code
+^^ - we won't need custom methods  
+^^ - we need to traverse the tree and output a JSON representation of the tree
+
+We will need to implement a search engine as well
+^^ searching the database 
