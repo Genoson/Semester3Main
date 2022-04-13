@@ -17,3 +17,4 @@ upcoming sprint
 
 ^^ - security is a great choice of focus
 
+^^- consider using jwt for authentication

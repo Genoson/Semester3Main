@@ -1,0 +1,11 @@
+web server to connect to 2 databases
+
+^^ - mongodb and postgresql
+
+^^ - web server handles all requests to data from the client
+
+^^ - login and logout credentials, securely stored in mongodb
+
+^^ - a searchable dataset of redundant data able to be searched by logged in users
+
+

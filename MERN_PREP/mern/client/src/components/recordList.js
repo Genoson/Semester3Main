@@ -33,6 +33,7 @@ export default function RecordList() {
         return;
       }
       const records = await response.json();
+      
       setRecords(records);
     }
 

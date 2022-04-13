@@ -1,2 +1,18 @@
 
 treeify is a npm package for bst to a tree
+
+sql injection attacks via Roy
+
+~ 27 minutes mark in this tutorial for the code on this
+
+
+template literals are bad, they open the doors to sql injection
+
+OR 1=1 will pull the whole database out it is common
+
+There are some common sql injections to test
+
+pool.query methods to protect against sql injection
+the $1 parameter protects us from sql injection
+
+
