@@ -23,22 +23,3 @@ module.exports = {
     return _db;
   },
 };
-
-// const connectToServer = (whichDB, callback) => {
-//     client.connect((err, db) => {
-//         if (db) {
-//             _db = db.db(whichDB);
-//             console.log(`Successfully connected to MongoDB server: ${whichDB}`);
-//         }
-//         return callback(err);
-//     });
-// }
-
-// const getDb = () => {
-//     return _db;
-// }
-
-// module.exports = {
-//     connectToServer,
-//     getDb
-// }

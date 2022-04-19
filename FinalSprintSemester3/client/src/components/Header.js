@@ -1,33 +1,25 @@
 // a simple header for the app
+// this needs some work, specific the login/ logout
 
-import React from 'react';
-import { Link} from 'react-router-dom';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
-    if (!props.user) {
-        return (
-            <header>
-                <div>a header</div>
-            <nav>
-                <Link to="/">Login</Link>
-                <Link to="/register">Register</Link>
-                <Link to="/binarytree">Binary Tree</Link>
-                {/* <Link to="/search">Search</Link> this page is only accessible if logged in  */}
-            </nav>
-            </header>
-        )
-    } else {
-        return (
-            <header>
-                <div>a header</div>
-            <nav>
-                <Link to="/">Logout</Link>
-                <Link to="/search">Search</Link>
-            </nav>
-            </header>
-        )
-    }
-  
-}
+//   useEffect(() => {
+//     console.log(props.user);
+//   }, [props.user]);
+
+  return (
+    <header>
+      <div>Search Animals</div>
+      <nav>
+        {props.user===null ? <Link to="/" >Login</Link> : <Link to="/" >Logout</Link>}
+        <Link to="/register">Register</Link>
+
+        {/* <Link to="/search">Search</Link> this page is only accessible if logged in  */}
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

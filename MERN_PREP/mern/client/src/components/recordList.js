@@ -51,6 +51,7 @@ export default function RecordList() {
     setRecords(newRecords);
   }
 
+  
   // map the records
   function recordList() {
     return records.map((record) => {

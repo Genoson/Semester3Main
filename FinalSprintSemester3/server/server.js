@@ -2,19 +2,31 @@
 // connects to both databases (mongodb and postgresql)
 
 // require modules
-const express = require('express');
-require ('dotenv').config({ path: './config.env' });
-const pgRouter = require('./routes/pgRoutes');
-const mongoRouter = require('./routes/mongoRoutes');
+const express = require("express");
+require("dotenv").config({ path: "./config.env" });
+const pgRouter = require("./routes/pgRoutes");
+const mongoRouter = require("./routes/mongoRoutes");
+const cors = require("cors");
 
-// defining functions
+// defining the app
 const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(pgRouter);
+app.use(mongoRouter);
 
-
-// defining constants
+// defining constants and variables and functions
 const port = process.env.PORT || 5000;
+const dbo = require("./db/mongoConn");
 
+// listening to the port
 
-
-
-
+app.listen(port, () => {
+  // connecting to the mongodb database
+  dbo.connectToServer((err) => {
+    if (err) console.log(err);
+  });
+  console.log(`Connected to MongoDB on port ${port}`);
+  // connecting to the postgresql database
+  
+});

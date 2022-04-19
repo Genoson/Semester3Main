@@ -6,11 +6,11 @@ const client = new MongoClient(Db, {useNewUrlParser: true, useUnifiedTopology: t
 
 var _db;
 
-const connectToServer = (whichDB, callback) => {
+const connectToServer = (callback) => {
     client.connect((err, db) => {
         if (db) {
-            _db = db.db(whichDB);
-            console.log(`Successfully connected to MongoDB server: ${whichDB}`);
+            _db = db.db("searchAnimals");
+            console.log(`Successfully connected to MongoDB server: searchAnimals`);
         }
         return callback(err);
     });

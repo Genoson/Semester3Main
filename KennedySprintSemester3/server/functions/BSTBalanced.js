@@ -1,4 +1,5 @@
 // all the required code for the Balanced BST
+// definitely more methods than strictly required
 
 class Node {
   constructor(key) {
@@ -295,6 +296,7 @@ const BalanceFactor = {
 // console.log("avl tree height: ", avlTree.getNodeHeight(avlTree.root));
 // console.log(avlTree.min());
 // console.log(avlTree.max());
+// console.log(avlTree.getBalanceFactor(avlTree.root)); 
 
 module.exports = {
   Node,

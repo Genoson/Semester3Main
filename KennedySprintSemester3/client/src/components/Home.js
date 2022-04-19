@@ -1,13 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router";
-import {Link} from 'react-router-dom';
+
 
 const Home = () => {
     return (
         <div>
-            <h1>Hello Kennedy binary tree problem</h1>
-        
+            <h1>Welcome!</h1>
+            <h3>This is a utility to receive a comma separated list of numbers,<br/>and generate a balanced binary tree from the input.<br/>Use the links above to get started. </h3>
         </div>
     );
 }

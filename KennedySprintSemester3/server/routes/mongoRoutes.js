@@ -2,10 +2,6 @@
 
 // require and import statements
 const express = require("express");
-// const mongoConn = require('../db/mongoConn');
-
-// const connectToServer = mongoConn.connectToServer;
-// const getDb = mongoConn.getDb;
 
 // define objects
 const BinaryTree = require("../functions/BSTBalanced");
@@ -13,11 +9,6 @@ const BinaryTree = require("../functions/BSTBalanced");
 const mongoRoutes = express.Router();
 // database object
 const dbo = require("../db/mongoConn");
-
-// handling mongo object id
-const ObjectId = require("mongodb").ObjectId;
-
-//routes for specific requests to and from the mongo database
 
 // get all the binary trees
 

@@ -4,35 +4,10 @@ import React from "react";
 import Tree from "./Tree";
 import { useState, useEffect } from "react";
 
-
-
 const BinaryTree = (params) => {
   let tree = params.binaryTree;
   let setTree = params.setBinaryTree;
   const [error, setError] = useState(null);
-  
-
-//   function syntaxHighlight(json) {
-//     if (typeof json != 'string') {
-//          json = JSON.stringify(json, undefined, 2);
-//     }
-//     json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-//     return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
-//         var cls = 'number';
-//         if (/^"/.test(match)) {
-//             if (/:$/.test(match)) {
-//                 cls = 'key';
-//             } else {
-//                 cls = 'string';
-//             }
-//         } else if (/true|false/.test(match)) {
-//             cls = 'boolean';
-//         } else if (/null/.test(match)) {
-//             cls = 'null';
-//         }
-//         return '<span class="' + cls + '">' + match + '</span>';
-//     });
-// }
 
   useEffect(() => {
     async function getTrees() {
@@ -43,35 +18,24 @@ const BinaryTree = (params) => {
         return;
       }
       let data = await response.json();
-    
-    //   setTree(JSON.stringify(JSON.parse(data), null, 2));
-        setTree(data);
-      
+      setTree(data);
     }
     getTrees();
-   
-    
-    
-
   }, []);
 
-  // function to create a displayable tree
+  // function to create a displayable tree, the below was suggested formatting search keywords from Tyler Downey
   // [6:36 p.m.] Tyler Downey
   // JSON.stringify(jsonobj,null,'\t')
   /**
    * var jsonPretty = JSON.stringify(JSON.parse(jsonString),null,2);
    */
 
-
-
-
   return (
     <div>
-      <h1>Hello Kennedy binary tree problem</h1>
+      <h1>Binary Trees From MongoDB</h1>
+      <h3>Displayed in reverse order of addition</h3>
       {error ? <p>{error}</p> : null}
-      {tree
-        ? <Tree tree={tree} setTree={setTree} />
-        : null}
+      {tree ? <Tree tree={tree} setTree={setTree} /> : null}
     </div>
   );
 };

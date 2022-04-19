@@ -1,7 +1,36 @@
-*{
+* {
   text-align: center;
+  transition: 0.3s;
 }
 
-.new-line{
-  white-space: pre-line;
+.new-line {
+  /* white-space: pre-line; */
+  padding-right: 10%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
+a:hover {
+  color: #ee6995;
+  transform: scale(1.7);
+}
+
+a:active {
+  color: darkviolet;
+}
+
+header div {
+  font-size: 2.5rem;
+}
+
+input {
+  text-align: left;
 }

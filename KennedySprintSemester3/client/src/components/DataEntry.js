@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 
 const DataEntry = (params) => {
@@ -28,13 +28,15 @@ const DataEntry = (params) => {
         window.alert(error);
         return;
       });
-      // setValue("");
+      setValue("");
       navigate("/binaryTree");
     }
   };
 
   return (
     <div>
+      <h1>Create a Binary Tree</h1>
+      <h3>Enter numbers seperated by commas<br/>no spaces, no trailing comma<br/>ie:   1,2,3</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

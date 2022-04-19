@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import {Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Header';
@@ -6,20 +7,24 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Search from './pages/Search';
-import BinaryTree from './pages/BinaryTree';
+
 
 function App() {
+  const [user, setUser] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
   return (
     
     <main>
-      <Header />
+      <Header user={user} setUser={setUser} />
     <h1>oh Hai</h1>
     
     <Routes>
-      <Route path="" element={<Login />} />
+      <Route path="" element={<Login setUser={setUser} setIsLoggedIn={setIsLoggedIn} />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/binarytree" element={<BinaryTree />} />
-      <Route path="/search" element={<Search />} /> // this wont be a link but a result of a login
+      
+      <Route path="/search" element={<Search user={user} isLoggedIn={isLoggedIn}/>} /> // this wont be a link but a result of a login
     </Routes>
     <Footer />
     </main>

@@ -1,0 +1,42 @@
+*{
+    text-align: center;
+    transition: .6s;
+    font-family: 'Roboto', sans-serif;
+}
+
+header div {
+    font-size: 2.5em;
+    margin:1rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+    height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+header nav a:hover {
+    color: #191;
+    text-decoration: underline;
+    transform: scale(1.7);
+}
+
+header nav a:active {
+    color: #919;
+    text-decoration: underline;
+    transform: scale(1.3);
+}
+
+input {
+    text-align: left;
+}
