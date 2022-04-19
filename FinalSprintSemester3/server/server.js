@@ -6,6 +6,7 @@ const express = require("express");
 require("dotenv").config({ path: "./config.env" });
 const pgRouter = require("./routes/pgRoutes");
 const mongoRouter = require("./routes/mongoRoutes");
+
 const cors = require("cors");
 
 // defining the app
@@ -28,5 +29,5 @@ app.listen(port, () => {
   });
   console.log(`Connected to MongoDB on port ${port}`);
   // connecting to the postgresql database
-  
+
 });

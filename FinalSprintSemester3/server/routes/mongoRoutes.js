@@ -2,12 +2,14 @@
 
 // require and import statements
 const express = require("express");
+const logger = require("../logger/logger");
 
 // define objects
 // router object
 const mongoRouter = express.Router();
 // database object
 const dbo = require("../db/mongoConn");
+
 
 // handling mongo object id
 const ObjectId = require("mongodb").ObjectId;
@@ -69,9 +71,10 @@ mongoRouter.route("/search/partial/:partial").get((req, res) => {
     .toArray((err, result) => {
       if (err) throw err;
       res.json(result);
-      console.log(result);
+      // console.log(result);
       if (result) console.log("search executed");
     });
+
 });
 
 // copied for posterity incase i break it
@@ -84,7 +87,7 @@ mongoRouter.route("/search/businessName/:businessName").get((req, res) => {
     .toArray((err, result) => {
       if (err) throw err;
       res.json(result);
-      console.log(result);
+      // console.log(result);
       if (result) console.log("search executed");
     });
 });
@@ -98,10 +101,20 @@ mongoRouter.route("/search/city/:city").get((req, res) => {
     .toArray((err, result) => {
       if (err) throw err;
       res.json(result);
-      console.log(result);
+      // console.log(result);
       if (result) console.log("search executed");
     });
 });
+
+mongoRouter.route("/log").post((req, res) => {
+  console.log(req.body);
+  let db_connect = dbo.getDb("searchAnimals");
+  db_connect.collection("log").insertOne(req.body, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+
+})
 
 // routes for searching for records
 
