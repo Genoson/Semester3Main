@@ -10,13 +10,16 @@ class Message {
     }
 }   
     class Logger {
+        // not sure if I need a constructor at all, this is essentially just a function, but this is the solution I created
         constructor() {
             this.message = {};
         }
+        // method to instantiate a message object
         create(user, search, database, time) {
             let message = new Message(user, search, database, time);
             return message;
         }
+        // this method got shifted to the server
         // log() {
         //     console.log(this.message);
         //     // add to database
@@ -31,7 +34,7 @@ class Message {
 
     }
 
-
+// testing the basic functionality of the logger
 //  let logger = new Logger();
 // logger.create("user1", "search1", "time1");
 // logger.log();

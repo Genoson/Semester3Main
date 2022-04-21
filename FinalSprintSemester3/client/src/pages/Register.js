@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-// bcrypt is unhappy about react, there are work arounds... to be continued
+// bcrypt is unhappy about react, there are work arounds... to be continued time allowing
 //import bcrypt from "bcryptjs";
 
 const Register = () => {
@@ -30,7 +30,7 @@ const Register = () => {
       setError(null);
       let user = new User(userName, password);
       // bcrypt.hash(user.password, 10, (err, hash) => {})
-      // ^^ this is where i would encode the password
+      // ^^ this is where i would encode the password, unless server side encryption becomes my chosen solution
       await fetch("http://localhost:5000/users/add", {
         method: "POST",
         headers: {
@@ -41,6 +41,7 @@ const Register = () => {
         window.alert(error);
         return;
       });
+      window.alert("User created, returning to login");
       setUserName("");
       setPassword("");
       setPassConfirm("");
@@ -51,7 +52,7 @@ const Register = () => {
   return (
     <div>
       <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
+      <form id="registerForm" onSubmit={handleSubmit}>
         <label>Username:</label>
         <input
           type="text"
@@ -76,7 +77,7 @@ const Register = () => {
           onChange={(e) => setPassConfirm(e.target.value)}
         />
         <br />
-        <input type="submit" value="Register" />
+        <input id="submit" type="submit" value="Register" />
       </form>
       {error ? <p className="error">{error}</p> : null}
       <div>

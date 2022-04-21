@@ -17,18 +17,16 @@ const Login = (props) => {
     props.setIsLoggedIn(false);
   }, []);
 
-  // i think i want a use effect to grab an index of usernames from the database
-  // thus I can quickly compare usernames to see if they exist before querying
-  // the database to compare passwords
-  // ^^ both usernames and passwords will be received from the database as hashed values
-
+  // a function to handle the login form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    console.log(userName);
+    // testing comments
+    //console.log(userName);
     // console.log(password);
     if (userName === "" || password === "") {
       setError("Please enter a username and password");
+      return
     }
     // code to send value to server to check if user exists
 
@@ -37,29 +35,50 @@ const Login = (props) => {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((response) => {
-      if (response.status === 200) {
-        console.log(response);
-        console.log(response.json());
-        
-      } else {
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          // console.log(response);
+          //console.log(response.json())
+          return response.json();
+        } else {
+          setError("User does not exist");
+          return
+        }
+      })
+      .catch((error) => {
+        setError("User does not exist" );
+        return;
+      })
+      .then((data) => {
+        //console.log(data);
+        if (data.password === password) {
+          //console.log("password is correct");
+          // if user exists and passwords match, set user object to the user object
+          props.setUser(userName);
+          props.setIsLoggedIn(true);
+          navigate("/search");
+        } else {
+          setError("Password is incorrect");
+        }
+      })
+      .catch((error) => {
         setError("User does not exist");
-      }
-    });
+        return;
+      });
 
-    // if user exists, set user object to the user object
-
-    props.setUser(userName);
-    props.setIsLoggedIn(true);
-    navigate("/search");
-    setUserName("");
-    setPassword("");
+    // early testing code for ensuring React was working
+    // props.setUser(userName);
+    // props.setIsLoggedIn(true);
+    // navigate("/search");
+    // setUserName("");
+    // setPassword("");
   };
 
   return (
     <div>
       <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <form id="registerForm" onSubmit={handleSubmit}>
         <label>Username:</label>
         <input
           type="text"
@@ -76,7 +95,7 @@ const Login = (props) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <br />
-        <input type="submit" value="Login" />
+        <input id="submit" type="submit" value="Login" />
       </form>
       {error ? <p className="error">{error}</p> : null}
       <div>

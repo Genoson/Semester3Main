@@ -1,0 +1,6 @@
+For my mongo database I found and downloaded a dataset of yelp reviews.
+These were a free to use for academic sample slice of yelps larger live dataset.
+I thought that using a real world dataset would be more on point than trying to design 
+my own approximation of a real world dataset.
+The postgres mock data provided is a randomized sample of mockaroo data  layed out 
+similar to the yelp dataset. It is fairly rudimentary.

@@ -28,6 +28,7 @@ app.listen(port, () => {
     if (err) console.log(err);
   });
   console.log(`Connected to MongoDB on port ${port}`);
-  // connecting to the postgresql database
+  // connecting to the postgresql database happens only as needed
+  // Perhaps I'll add a test connection route to validate the postgres is working
 
 });

@@ -2,14 +2,12 @@
 
 // require and import statements
 const express = require("express");
-const logger = require("../logger/logger");
 
 // define objects
 // router object
 const mongoRouter = express.Router();
 // database object
 const dbo = require("../db/mongoConn");
-
 
 // handling mongo object id
 const ObjectId = require("mongodb").ObjectId;
@@ -60,8 +58,8 @@ mongoRouter.route("/users/add").post((req, res) => {
 //     )
 
 // });
-
 // broken, kept for posterity
+
 mongoRouter.route("/search/partial/:partial").get((req, res) => {
   let db_connect = dbo.getDb("searchAnimals");
   console.log(req.params.businessName);
@@ -74,7 +72,6 @@ mongoRouter.route("/search/partial/:partial").get((req, res) => {
       // console.log(result);
       if (result) console.log("search executed");
     });
-
 });
 
 // copied for posterity incase i break it
@@ -113,9 +110,18 @@ mongoRouter.route("/log").post((req, res) => {
     if (err) throw err;
     res.json(result);
   });
+});
 
-})
-
-// routes for searching for records
+// route for search history, may not be used depending on time
+mongoRouter.route("/log/:user").get((req, res) => {
+  let db_connect = dbo.getDb("searchAnimals");
+  db_connect
+    .collection("log")
+    .find({ user: String(req.params.user) })
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.json(result);
+    });
+});
 
 module.exports = mongoRouter;

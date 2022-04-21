@@ -18,7 +18,7 @@ function App() {
     
     <main>
       <Header user={user} setUser={setUser} />
-    <h1>oh Hai</h1>
+    
     
     <Routes>
       <Route path="" element={<Login setUser={setUser} setIsLoggedIn={setIsLoggedIn} />} />
