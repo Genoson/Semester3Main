@@ -33,7 +33,7 @@ const BinaryTree = (params) => {
   return (
     <div>
       <h1>Binary Trees From MongoDB</h1>
-      <h3>Displayed in reverse order of addition</h3>
+      <h3>Displayed in reverse order of addition to the database</h3>
       {error ? <p>{error}</p> : null}
       {tree ? <Tree tree={tree} setTree={setTree} /> : null}
     </div>

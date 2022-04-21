@@ -1,0 +1,10 @@
+For my mongo database I found and downloaded a dataset of yelp reviews.
+A sample slice of yelps larger live dataset.
+These were a free to use for academic purposes. 
+I thought that using a real world dataset would be more on point than trying to design 
+my own approximation of a real world dataset.
+The postgres mock data provided is a randomized sample of mockaroo data  layed out 
+similar to the yelp dataset. It is fairly rudimentary.
+
+The file I'm sending with a slice of the data is a JSON file that VSCode thinks contains an error, 
+but xcode and mongo seem to be able to access the data just fine.

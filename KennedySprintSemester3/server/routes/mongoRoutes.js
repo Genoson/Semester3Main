@@ -32,7 +32,7 @@ mongoRoutes.route("/trees/add").post((req, res) => {
   numbers = req.body.value.split(",");
 
   numbers.forEach((number) => {
-    newTree.insert(number);
+    newTree.insert(Number(number));
   });
   db_connect.collection("trees").insertOne(newTree, (err, result) => {
     if (err) throw err;
